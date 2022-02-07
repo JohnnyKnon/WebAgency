@@ -54,6 +54,95 @@ li{
     background-color: $white-color;
 
     // Header
+    header{
+        // flex
+        display: flex;
+        justify-content: center;
+        nav{
+            // max-width
+            max-width: 1200px;
+            // margin
+            margin: auto;
+            // padding
+            padding-top: 30px;
+            // position
+            position: fixed;
+            width: 100%;
+            // flex
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // width
+            width: 100%;
+            // mix-blend-mode
+            mix-blend-mode: difference;
+            // logo
+            & > a{
+                // font
+                font-weight: $black-weight;
+                font-size: 1.7rem;
+                color: $white-color;
+            }
+            // pc
+            #screen__pc{
+                // flex
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                // font
+                font-family: $eng-font-family;
+                color: $white-color;
+                // Nav items
+                li{
+                    // position
+                    position: relative;
+                    a{
+                        // display
+                        display: block;
+                        // font
+                        font-weight: $light-weight;
+                        font-size: 1rem;
 
+                        &::after{
+                            content: "";
+                            // display
+                            display: block;
+                            // border
+                            border-bottom: 2px solid $white-color;
+                            // position
+                            position: relative;
+                            top: 1.5px;
+                            // transform
+                            transform: scaleX(0);
+                            // transition
+                            transition: all 200ms ease-in;
+                        }
+                        // hover
+                        &:hover{
+                            &::after{
+                                // transform
+                                transform: scaleX(100%);
+                            }
+                        }
+
+                    }
+                    button{
+                        // font
+                        font-weight: $bold-weight;
+                        color: $white-color;
+                        // border
+                        border: 1px solid $white-color;
+                        border-radius: 6px;
+                        // padding
+                        padding: 6px 15px;
+                    }
+                }
+            }
+            // mobile
+            #screen__mobile{
+                display: none;
+            }
+        }
+    }
     // Main
 }

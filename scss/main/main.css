@@ -27,4 +27,89 @@ li {
   height: 100%;
   background-color: #fff;
 }
+
+#wrapper header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#wrapper header nav {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 30px;
+  position: fixed;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  mix-blend-mode: difference;
+}
+
+#wrapper header nav > a {
+  font-weight: 900;
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+#wrapper header nav #screen__pc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+#wrapper header nav #screen__pc li {
+  position: relative;
+}
+
+#wrapper header nav #screen__pc li a {
+  display: block;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+#wrapper header nav #screen__pc li a::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #fff;
+  position: relative;
+  top: 1.5px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+#wrapper header nav #screen__pc li a:hover::after {
+  -webkit-transform: scaleX(100%);
+          transform: scaleX(100%);
+}
+
+#wrapper header nav #screen__pc li button {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 6px 15px;
+}
+
+#wrapper header nav #screen__mobile {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
