@@ -12,6 +12,7 @@ const LINE_TWO = document.querySelector('#line-2');
 const LINE_THREE = document.querySelector('#line-3');
 
 
+
 // Menu Smooth moving
 NAV_MENU.addEventListener('click', (event)=>{ // 클릭한 이벤트 추가
     const target = event.target; //target (눌렀을때에 해당 타겟에 이벤트)
@@ -26,12 +27,11 @@ NAV_MENU.addEventListener('click', (event)=>{ // 클릭한 이벤트 추가
    scrollIntoView(link);
 });
 
-
 MENU_BTN.addEventListener('click', ()=>{
     NAV_MENU.classList.toggle('screen__pc-active');
     SPAN_STYLE.classList.toggle('span-active');
     LINE_ONE.classList.toggle('line-1-active');
-    LINE_TWO.classList.toggle('line-2-active')
+    LINE_TWO.classList.toggle('line-2-active');
     LINE_THREE.classList.toggle('line-3-active');
 
 });

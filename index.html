@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,8 +13,6 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-    <!-- JS Link -->
-    <script src="./js/nav/nav.js" defer></script>
     <title>웹플</title>
   </head>
   <body>
@@ -33,7 +31,7 @@
           </ul>
           <!-- 모바일 메뉴바 -->
           <ul id="screen__mobile">
-            <li id="menubar" class="span">
+            <li id="menubar">
               <!-- Menu Bar -->
               <span id="line-1"></span>
               <span id="line-2"></span>
@@ -47,10 +45,12 @@
         <!-- Home -->
         <section id="home">
           <div class="home__slider">
-            <div class="slider__slide active"></div>
-            <div class="slider__slide"></div>
-            <div class="slider__slide"></div>
-            <div class="slider__slide"></div>
+            <div class="slider__slides">
+              <div class="slider__slide active"></div>
+              <div class="slider__slide"></div>
+              <div class="slider__slide"></div>
+              <div class="slider__slide"></div>
+            </div>
           </div>
           <h1>Develop your<br />business</h1>
           <h4>웹이 필요할 땐 웹플에서 와플처럼 사자</h4>
@@ -68,5 +68,8 @@
       <!-- footer -->
       <footer></footer>
     </div>
+
+    <!-- JS Link -->
+    <script src="./js/nav/nav.js"></script>
   </body>
 </html>
