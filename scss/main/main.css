@@ -40,13 +40,11 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 20px;
 }
 
 #wrapper header nav {
   max-width: 1200px;
-  margin: auto;
-  padding-top: 30px;
-  position: fixed;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,140 +55,15 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  mix-blend-mode: difference;
-  z-index: 1000;
-}
-
-#wrapper header nav > a {
-  position: relative;
-  top: -2px;
-  padding-left: 10px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 1.7rem;
-  color: #fff;
-}
-
-#wrapper header nav .screen__pc {
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 40px;
-  font-family: "Roboto", sans-serif;
-  color: #fff;
-  z-index: 1500;
-}
-
-#wrapper header nav .screen__pc li {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  font-weight: 300;
-  font-size: 1rem;
-}
-
-#wrapper header nav .screen__pc li::after {
-  content: "";
-  display: block;
-  border-bottom: 2px solid #fff;
-  position: relative;
-  top: 1.5px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-}
-
-#wrapper header nav .screen__pc li:hover::after {
-  -webkit-transform: scaleX(100%);
-          transform: scaleX(100%);
-}
-
-#wrapper header nav .screen__pc button {
-  font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  padding: 6px 15px;
-}
-
-@media screen and (max-width: 680px) {
-  #wrapper header nav .screen__pc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    -webkit-transform: translate(100px, -50%);
-            transform: translate(100px, -50%);
-    -webkit-transition: all 600ms ease-in-out;
-    transition: all 600ms ease-in-out;
-    width: 200px;
-    height: 100%;
-    background-color: #fff;
-    padding-top: 250px;
-    opacity: 0;
-  }
-  #wrapper header nav .screen__pc li {
-    color: #000;
-  }
-  #wrapper header nav .screen__pc button {
-    color: #000;
-    border-color: #000;
-  }
-}
-
-#wrapper header nav .screen__pc-active {
-  opacity: 1;
-  -webkit-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
-}
-
-#wrapper header nav #screen__mobile {
-  padding-right: 20px;
-  display: none;
   z-index: 2000;
 }
 
-@media screen and (max-width: 680px) {
-  #wrapper header nav #screen__mobile {
-    display: block;
-  }
-  #wrapper header nav #screen__mobile #menubar {
-    cursor: pointer;
-  }
-  #wrapper header nav #screen__mobile #menubar span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    margin-top: 5px;
-    background-color: #fff;
-  }
-  #wrapper header nav #screen__mobile #menubar .line-1-active {
-    background-color: #000;
-    -webkit-transform: rotate(-50deg);
-            transform: rotate(-50deg);
-  }
-  #wrapper header nav #screen__mobile #menubar .line-2-active {
-    display: none;
-  }
-  #wrapper header nav #screen__mobile #menubar .line-3-active {
-    background-color: #000;
-    -webkit-transform: rotate(50deg);
-            transform: rotate(50deg);
-    position: relative;
-    top: -8px;
-  }
+#wrapper header nav > a {
+  font-family: #wrapper header nav > a "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #fc7703;
+  padding-left: 15px;
 }
 
 #wrapper main {
