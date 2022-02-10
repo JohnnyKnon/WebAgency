@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS Link -->
     <link rel="stylesheet" href="scss/main/main.css" />
-    <!-- FontAwesome -->
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -16,61 +18,92 @@
     <title>웹플</title>
   </head>
   <body>
-    <div id="wrapper">
-      <!-- 헤더 네비게이션 파트 -->
-      <header>
-        <nav>
-          <a href="#">< webffle /></a>
-          <!-- 메뉴바 -->
-          <section class="menubar-wrapper">
-            <button>Sign Up</button>
-            <!-- 햄버거 메뉴 -->
-            <div class="hamburger">
-              <span id="line-1"></span>
-              <span id="line-2"></span>
-              <span id="line-3"></span>
-            </div>
-          </section>
-        </nav>
-        <section id="navbar__menu__contents">
-          <ul class="screen__pc">
-            <li data-link="#about">About Us</li>
-            <li data-link="#service">Service</li>
-            <li data-link="#template">Template</li>
-            <li data-link="#contact">Contact Us</li>
-          </ul>
-        </section>
-      </header>
-      <!-- Main -->
-      <main>
-        <!-- Home -->
-        <section id="home">
-          <div class="home__slider">
-            <div class="slider__slides">
-              <div class="slider__slide active"></div>
-              <div class="slider__slide"></div>
-              <div class="slider__slide"></div>
-              <div class="slider__slide"></div>
-            </div>
-          </div>
-          <h1>Develop your<br />business</h1>
+    <!-- 헤더 네비게이션 파트 -->
+    <nav id="navbar">
+      <a href="#">< webffle /></a>
+      <!-- 메뉴바 -->
+      <section class="menubar-wrapper">
+        <button>Sign Up</button>
+        <!-- 햄버거 메뉴 -->
+        <div class="hamburger">
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+          <span class="line-3"></span>
+        </div>
+      </section>
+    </nav>
+    <aside class="navbar__menu__contents">
+      <ul class="screen__pc">
+        <li data-link="#about">About Us</li>
+        <li data-link="#service">Service</li>
+        <li data-link="#template">Template</li>
+        <li data-link="#contact">Contact Us</li>
+      </ul>
+    </aside>
+    <!-- Main -->
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div class="home__bg__wrapper">
+          <div class="home__img"></div>
+        </div>
+        <article>
+          <h1>Develop your business</h1>
           <h4>웹이 필요할 땐 웹플에서 와플처럼 사자</h4>
-          <a class="scroll__down"><i class="fas fa-long-arrow-alt-down"></i></a>
-        </section>
-        <!-- About Us -->
-        <section id="about"></section>
-        <!-- Service -->
-        <section id="service"></section>
-        <!-- Template -->
-        <section id="template"></section>
-        <!-- Contact Us -->
-        <section id="contact"></section>
-      </main>
-      <!-- footer -->
-      <footer></footer>
-    </div>
+          <div>
+            <a class="scroll__down"
+              ><i class="fas fa-long-arrow-alt-down"></i
+            ></a>
+          </div>
+        </article>
+      </section>
+      <!-- About Us -->
+      <section id="about">
+        <!-- left Image box -->
+        <article
+          class="left__box"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
+          <div class="about__img"></div>
+          <h1 class="about__title">About Us</h1>
+        </article>
+        <!-- right word box -->
+        <article
+          class="right__box"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        >
+          <h2>Webffle이란?</h2>
+          <p>
+            미야 디자인하우스 소속 개발팀으로써, 웹을 와플처럼 고객님에게 맞는
+            적정한 가격과, 퀄리티로 고객의 만족도를 높이고자 하는 모토로
+            만들어진 팀입니다. 웹 개발을 중심으로 뉴스레터, 더 나아가 각종
+            서비스(쇼핑몰 스킨, e-book 등)까지 확장을 준비 중입니다. 디자인 및
+            홍보 분야의 전문가로 이루어진 미야 디자인하우스 소속 팀으로써
+            디자인팀과 함께 고객님들의 브랜드를 '드로잉'하고 '개발'하는 동네
+            와플 가게 같은 친근함과, 와플의 장인 같은 정확함과 우수함을
+            보여드리겠습니다.
+          </p>
+        </article>
+      </section>
+      <!-- Service -->
+      <section id="service"></section>
+      <!-- Template -->
+      <section id="template"></section>
+      <!-- Contact Us -->
+      <section id="contact"></section>
+    </main>
+    <!-- footer -->
+    <footer></footer>
 
     <!-- JS Link -->
     <script src="./js/nav/nav.js"></script>
+    <script src="./js/main/home.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
