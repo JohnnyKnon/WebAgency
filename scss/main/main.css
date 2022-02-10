@@ -275,15 +275,32 @@ main #home article {
 }
 
 main #home article h1 {
+  display: table-cell;
+  vertical-align: middle;
   font-size: 3rem;
   font-weight: 900;
-  padding: 0 25px;
-  -webkit-animation-name: HomeAnimationH1;
-          animation-name: HomeAnimationH1;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  margin: 15px 0;
+  border-right: 2px solid #fff;
+  -webkit-animation: cursor 0.5s ease infinite;
+          animation: cursor 0.5s ease infinite;
+}
+
+@-webkit-keyframes cursor {
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes cursor {
+  to {
+    border-color: transparent;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main #home article h1 {
+    font-size: 1.5rem;
+  }
 }
 
 main #home article h4 {
@@ -323,32 +340,6 @@ main #home article div a {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes HomeAnimationH1 {
-  from {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes HomeAnimationH1 {
-  from {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes HomeAnimationH4 {
@@ -428,7 +419,6 @@ main #home article div a {
 }
 
 main #about {
-  border: 1px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,7 +554,32 @@ main #about .right__box p {
   main #about .right__box p {
     width: 300px;
     font-size: 0.9rem;
+    letter-spacing: normal;
     line-height: normal;
   }
+}
+
+main #service {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #service .service__title__wrapper {
+  padding-top: 70px;
+}
+
+main #service .service__title__wrapper .service__title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2.7rem;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
