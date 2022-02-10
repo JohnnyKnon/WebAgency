@@ -441,6 +441,16 @@ main #about {
   gap: 50px;
 }
 
+@media screen and (max-width: 912px) {
+  main #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   main #about {
     -webkit-box-orient: vertical;
@@ -475,6 +485,13 @@ main #about .left__box .about__img {
   background: url(../../images/main/bg/webffleBg4.jpg) no-repeat center/cover;
   border-radius: 5px;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 912px) {
+  main #about .left__box .about__img {
+    width: 650px;
+    height: 350px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -528,15 +545,26 @@ main #about .right__box h2 {
 main #about .right__box p {
   width: 400px;
   text-align: justify;
+  line-height: 29px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 912px) {
+  main #about .right__box p {
+    width: 700px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    line-height: 38px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   main #about .right__box p {
     width: 300px;
     font-size: 0.9rem;
+    line-height: normal;
   }
 }
 /*# sourceMappingURL=main.css.map */

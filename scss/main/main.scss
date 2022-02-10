@@ -425,6 +425,11 @@ main {
     align-items: center;
     gap: 50px;
     // Responsive
+    @include ResponsiveTablet() {
+      // flex
+      flex-direction: column;
+      gap: 20px;
+    }
     @include ResponsiveMobile() {
       // flex
       flex-direction: column;
@@ -453,6 +458,11 @@ main {
         margin-top: 50px;
 
         // Responsive
+        @include ResponsiveTablet() {
+          // size
+          width: 650px;
+          height: 350px;
+        }
         @include ResponsiveMobile() {
           // size
           width: 300px;
@@ -497,17 +507,30 @@ main {
         width: 400px;
         // text
         text-align: justify;
+        line-height: 29px;
         // font
         font-family: $kr-font-family;
         font-weight: $light-weight;
         font-size: 1.2rem;
 
         //Responsive
+        @include ResponsiveTablet() {
+          // width
+          width: 700px;
+          // font
+          font-size: 1.4rem;
+          // text
+          letter-spacing: 2px;
+          line-height: 38px;
+        }
+
         @include ResponsiveMobile() {
           // width
           width: 300px;
           // font
           font-size: 0.9rem;
+          //   text
+          line-height: normal;
         }
       }
     }
