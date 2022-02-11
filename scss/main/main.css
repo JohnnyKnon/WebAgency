@@ -10,6 +10,19 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #cfcfcf;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.822);
+}
+
 button {
   background-color: transparent;
   cursor: pointer;
@@ -574,7 +587,7 @@ main #service {
 }
 
 main #service .service__title__wrapper {
-  padding-top: 70px;
+  padding-top: 90px;
 }
 
 main #service .service__title__wrapper .service__title {

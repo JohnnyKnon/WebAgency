@@ -30,6 +30,22 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  // size
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  // background
+  background-color: $grey-color;
+  // border
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  // background
+  background-color: $nav-black-color;
+}
+
 button {
   background-color: transparent;
   cursor: pointer;
@@ -542,7 +558,7 @@ main {
     // title
     .service__title__wrapper {
       // padding
-      padding-top: 70px;
+      padding-top: 90px;
       .service__title {
         // font
         font-family: $kr-font-family;
