@@ -32,7 +32,7 @@ body {
 
 body::-webkit-scrollbar {
   // size
-  width: 8px;
+  width: 5px;
 }
 body::-webkit-scrollbar-thumb {
   // background
@@ -60,10 +60,21 @@ li {
   list-style: none;
 }
 
-// flex mixin
+// 자주쓰는 flex column 스타일
 @mixin flexboxStyle {
   display: flex;
   flex-direction: column;
+}
+
+// Service Mixin
+@mixin ServiceBoxes($widthSize, $heightSize, $BGcolor, $radius) {
+  // size
+  width: $widthSize;
+  height: $heightSize;
+  //   background
+  background-color: $BGcolor;
+  //   border
+  border-radius: $radius;
 }
 
 @mixin ResponsiveMobile {
@@ -71,6 +82,13 @@ li {
     @content;
   }
 }
+
+@mixin ResponsiveSmallTablet {
+  @media screen and (max-width: 850px) {
+    @content;
+  }
+}
+
 @mixin ResponsiveTablet {
   @media screen and (max-width: 912px) {
     @content;
@@ -554,16 +572,201 @@ main {
     // flex
     @include flexboxStyle();
     align-items: center;
-
+    justify-content: center;
+    gap: 120px;
+    // Responsive
+    @include ResponsiveMobile() {
+      gap: 30px;
+    }
+    .bg__img {
+      // position
+      position: absolute;
+      // background
+      background: url(../../images/main/bg/webffleBg3.jpg) no-repeat
+        center/cover;
+      // size
+      width: 100%;
+      height: 100%;
+      //   filter
+      filter: brightness(40%);
+    }
     // title
     .service__title__wrapper {
-      // padding
-      padding-top: 90px;
+      z-index: 100;
       .service__title {
         // font
         font-family: $kr-font-family;
         font-size: 2.7rem;
         color: $white-color;
+      }
+    }
+    // contents
+    .service__contents__wrapper {
+      // flex
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      // Responsive
+      @include ResponsiveMobile() {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      //   website
+      .website {
+        //   box styling
+        @include ServiceBoxes(400px, 500px, $white-color, 20px);
+        // flex
+        @include flexboxStyle();
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        // Responsive
+        @include ResponsiveSmallTablet() {
+          @include ServiceBoxes(300px, 400px, $white-color, 20px);
+        }
+        // Responsive
+        @include ResponsiveMobile() {
+          @include ServiceBoxes(300px, 200px, $white-color, 20px);
+          gap: 3px;
+        }
+
+        // icon
+        span {
+          // font
+          font-size: 5rem;
+          color: $dark-grey-color;
+          @include ResponsiveMobile() {
+            //   font
+            font-size: 3rem;
+          }
+        }
+        h1 {
+          // font
+          font-family: $kr-font-family;
+          font-weight: $bold-weight;
+          font-size: 2rem;
+          color: $orange-color;
+          //   text
+          letter-spacing: 3px;
+          //   Reponsive
+          @include ResponsiveMobile() {
+            //   font
+            font-size: 1.6rem;
+          }
+        }
+        button {
+          // margin
+          margin-top: 40px;
+          // font
+          font-family: $kr-font-family;
+          font-weight: $medium-weight;
+          font-size: 1rem;
+          color: $white-color;
+          //   button style
+          //   padding
+          padding: 7px 28px;
+          //   background
+          background-color: $black-color;
+          //   border
+          border: 1px solid $black-color;
+          border-radius: 20px;
+          //   transition
+          transition: all 300ms ease-in-out;
+          // hover
+          &:hover,
+          &:focus {
+            //   font
+            color: $black-color;
+            // background
+            background-color: $white-color;
+          }
+          //   Reponsive
+          @include ResponsiveMobile() {
+            // margin
+            margin-top: 0px;
+            //   padding
+            padding: 4px 18px;
+          }
+        }
+      }
+      .newsletter {
+        //   box styling
+        @include ServiceBoxes(400px, 500px, $white-color, 20px);
+        // flex
+        @include flexboxStyle();
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        // Responsive
+        @include ResponsiveSmallTablet() {
+          @include ServiceBoxes(300px, 400px, $white-color, 20px);
+        }
+        // Responsive
+        @include ResponsiveMobile() {
+          @include ServiceBoxes(300px, 200px, $white-color, 20px);
+          gap: 3px;
+        }
+
+        // icon
+        span {
+          // font
+          font-size: 5rem;
+          color: $dark-grey-color;
+          @include ResponsiveMobile() {
+            //   font
+            font-size: 3rem;
+          }
+        }
+        h1 {
+          // font
+          font-family: $kr-font-family;
+          font-weight: $bold-weight;
+          font-size: 2rem;
+          color: $orange-color;
+          //   text
+          letter-spacing: 3px;
+          //   Reponsive
+          @include ResponsiveMobile() {
+            //   font
+            font-size: 1.6rem;
+          }
+        }
+        button {
+          // margin
+          margin-top: 40px;
+          // font
+          font-family: $kr-font-family;
+          font-weight: $medium-weight;
+          font-size: 1rem;
+          color: $white-color;
+          //   button style
+          //   padding
+          padding: 7px 28px;
+          //   background
+          background-color: $black-color;
+          //   border
+          border: 1px solid $black-color;
+          border-radius: 20px;
+          //   transition
+          transition: all 300ms ease-in-out;
+          // hover
+          &:hover,
+          &:focus {
+            //   font
+            color: $black-color;
+            // background
+            background-color: $white-color;
+          }
+          //   Reponsive
+          @include ResponsiveMobile() {
+            // margin
+            margin-top: 0px;
+            //   padding
+            padding: 4px 18px;
+          }
+        }
       }
     }
   }

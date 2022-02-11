@@ -11,7 +11,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -584,15 +584,239 @@ main #service {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 120px;
+}
+
+@media screen and (max-width: 767px) {
+  main #service {
+    gap: 30px;
+  }
+}
+
+main #service .bg__img {
+  position: absolute;
+  background: url(../../images/main/bg/webffleBg3.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
 }
 
 main #service .service__title__wrapper {
-  padding-top: 90px;
+  z-index: 100;
 }
 
 main #service .service__title__wrapper .service__title {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 2.7rem;
   color: #fff;
+}
+
+main #service .service__contents__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
+
+main #service .service__contents__wrapper .website {
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  main #service .service__contents__wrapper .website {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .website {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    gap: 3px;
+  }
+}
+
+main #service .service__contents__wrapper .website span {
+  font-size: 5rem;
+  color: #575757;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .website span {
+    font-size: 3rem;
+  }
+}
+
+main #service .service__contents__wrapper .website h1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fc7703;
+  letter-spacing: 3px;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .website h1 {
+    font-size: 1.6rem;
+  }
+}
+
+main #service .service__contents__wrapper .website button {
+  margin-top: 40px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  padding: 7px 28px;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 20px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+main #service .service__contents__wrapper .website button:hover, main #service .service__contents__wrapper .website button:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .website button {
+    margin-top: 0px;
+    padding: 4px 18px;
+  }
+}
+
+main #service .service__contents__wrapper .newsletter {
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  main #service .service__contents__wrapper .newsletter {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .newsletter {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    gap: 3px;
+  }
+}
+
+main #service .service__contents__wrapper .newsletter span {
+  font-size: 5rem;
+  color: #575757;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .newsletter span {
+    font-size: 3rem;
+  }
+}
+
+main #service .service__contents__wrapper .newsletter h1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fc7703;
+  letter-spacing: 3px;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .newsletter h1 {
+    font-size: 1.6rem;
+  }
+}
+
+main #service .service__contents__wrapper .newsletter button {
+  margin-top: 40px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  padding: 7px 28px;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 20px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+main #service .service__contents__wrapper .newsletter button:hover, main #service .service__contents__wrapper .newsletter button:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .newsletter button {
+    margin-top: 0px;
+    padding: 4px 18px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

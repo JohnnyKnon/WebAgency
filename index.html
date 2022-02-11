@@ -9,12 +9,10 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    <script
+      src="https://kit.fontawesome.com/91eb112b1c.js"
       crossorigin="anonymous"
-    />
+    ></script>
     <title>웹플</title>
   </head>
   <body>
@@ -89,10 +87,28 @@
       </section>
       <!-- Service -->
       <section id="service">
+        <div class="bg__img"></div>
         <article class="service__title__wrapper">
           <h1 class="service__title">Service</h1>
         </article>
-        <article class="service__contents__wrapper"></article>
+        <article class="service__contents__wrapper">
+          <!-- 웹사이트 박스 -->
+          <section class="website" data-aos="fade-up" data-aos-duration="2000">
+            <span><i class="fa-solid fa-laptop-code"></i></span>
+            <h1>웹사이트<br />제작정보</h1>
+            <button>보러가기 <i class="fa-solid fa-angle-right"></i></button>
+          </section>
+          <!-- 뉴스레터 박스 -->
+          <section
+            class="newsletter"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <span><i class="fa-solid fa-newspaper"></i></span>
+            <h1>뉴스레터<br />제작정보</h1>
+            <button>보러가기 <i class="fa-solid fa-angle-right"></i></button>
+          </section>
+        </article>
       </section>
       <!-- Template -->
       <section id="template"></section>
