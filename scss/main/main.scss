@@ -84,7 +84,7 @@ li {
 }
 
 @mixin ResponsiveSmallTablet {
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 780px) {
     @content;
   }
 }
@@ -567,6 +567,8 @@ main {
 
   // Service
   #service {
+    //   position
+    position: relative;
     // background
     background-color: $black-color;
     // flex
@@ -574,9 +576,10 @@ main {
     align-items: center;
     justify-content: center;
     gap: 120px;
-    // Responsive
     @include ResponsiveMobile() {
-      gap: 30px;
+      overflow-y: hidden;
+      //   flex
+      gap: 15px;
     }
     .bg__img {
       // position
@@ -592,12 +595,23 @@ main {
     }
     // title
     .service__title__wrapper {
+      // position
+      position: relative;
+      // z-index
       z-index: 100;
       .service__title {
         // font
         font-family: $kr-font-family;
         font-size: 2.7rem;
         color: $white-color;
+        @include ResponsiveMobile() {
+          // position
+          position: absolute;
+          //   transform
+          transform: rotate(90deg);
+          top: 480px;
+          left: 80px;
+        }
       }
     }
     // contents
@@ -606,166 +620,90 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 50px;
-      // Responsive
+      flex-wrap: wrap;
+      gap: 15px;
+      //   Responsive
       @include ResponsiveMobile() {
+        //   padding
+        padding-top: 50px;
+        // flex
         flex-direction: column;
-        gap: 20px;
       }
-
-      //   website
-      .website {
+      //   box styiing
+      .website,
+      .newsletter,
+      .hosting {
         //   box styling
-        @include ServiceBoxes(400px, 500px, $white-color, 20px);
+        @include ServiceBoxes(250px, 280px, $white-color, 12px);
         // flex
         @include flexboxStyle();
-        align-items: center;
         justify-content: center;
-        gap: 5px;
-        // Responsive
-        @include ResponsiveSmallTablet() {
-          @include ServiceBoxes(300px, 400px, $white-color, 20px);
-        }
+        align-items: center;
+        gap: 10px;
+        // font
+        font-family: $kr-font-family;
+        // text
+        text-align: center;
         // Responsive
         @include ResponsiveMobile() {
-          @include ServiceBoxes(300px, 200px, $white-color, 20px);
-          gap: 3px;
+          gap: 5px;
         }
-
-        // icon
         span {
           // font
-          font-size: 5rem;
+          font-size: 2.2rem;
           color: $dark-grey-color;
-          @include ResponsiveMobile() {
-            //   font
-            font-size: 3rem;
-          }
         }
+
         h1 {
           // font
-          font-family: $kr-font-family;
           font-weight: $bold-weight;
-          font-size: 2rem;
+          font-size: 1.2rem;
           color: $orange-color;
-          //   text
-          letter-spacing: 3px;
-          //   Reponsive
-          @include ResponsiveMobile() {
-            //   font
-            font-size: 1.6rem;
-          }
         }
         button {
-          // margin
-          margin-top: 40px;
           // font
           font-family: $kr-font-family;
-          font-weight: $medium-weight;
-          font-size: 1rem;
-          color: $white-color;
-          //   button style
-          //   padding
-          padding: 7px 28px;
-          //   background
-          background-color: $black-color;
-          //   border
-          border: 1px solid $black-color;
-          border-radius: 20px;
-          //   transition
-          transition: all 300ms ease-in-out;
-          // hover
+          font-size: 0.8rem;
+          // after
+          &::after {
+            //   display
+            display: block;
+            // content
+            content: '';
+            // border
+            border-bottom: 1px solid $black-color;
+            // transform
+            transform: scaleX(0);
+            // transition
+            transition: all 250ms ease-in-out;
+          }
           &:hover,
           &:focus {
-            //   font
-            color: $black-color;
-            // background
-            background-color: $white-color;
+            &::after {
+              //   transform
+              transform: scaleX(1);
+            }
           }
-          //   Reponsive
-          @include ResponsiveMobile() {
-            // margin
-            margin-top: 0px;
-            //   padding
-            padding: 4px 18px;
-          }
+        }
+      }
+      //   Responsive
+      .website {
+        @include ResponsiveMobile() {
+          @include ServiceBoxes(250px, 180px, $white-color, 12px);
         }
       }
       .newsletter {
-        //   box styling
-        @include ServiceBoxes(400px, 500px, $white-color, 20px);
-        // flex
-        @include flexboxStyle();
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        // Responsive
-        @include ResponsiveSmallTablet() {
-          @include ServiceBoxes(300px, 400px, $white-color, 20px);
-        }
-        // Responsive
         @include ResponsiveMobile() {
-          @include ServiceBoxes(300px, 200px, $white-color, 20px);
-          gap: 3px;
+          @include ServiceBoxes(250px, 180px, $white-color, 12px);
         }
-
-        // icon
-        span {
-          // font
-          font-size: 5rem;
-          color: $dark-grey-color;
-          @include ResponsiveMobile() {
-            //   font
-            font-size: 3rem;
-          }
+      }
+      .hosting {
+        //   Responsive
+        @include ResponsiveSmallTablet() {
+          @include ServiceBoxes(520px, 240px, $white-color, 12px);
         }
-        h1 {
-          // font
-          font-family: $kr-font-family;
-          font-weight: $bold-weight;
-          font-size: 2rem;
-          color: $orange-color;
-          //   text
-          letter-spacing: 3px;
-          //   Reponsive
-          @include ResponsiveMobile() {
-            //   font
-            font-size: 1.6rem;
-          }
-        }
-        button {
-          // margin
-          margin-top: 40px;
-          // font
-          font-family: $kr-font-family;
-          font-weight: $medium-weight;
-          font-size: 1rem;
-          color: $white-color;
-          //   button style
-          //   padding
-          padding: 7px 28px;
-          //   background
-          background-color: $black-color;
-          //   border
-          border: 1px solid $black-color;
-          border-radius: 20px;
-          //   transition
-          transition: all 300ms ease-in-out;
-          // hover
-          &:hover,
-          &:focus {
-            //   font
-            color: $black-color;
-            // background
-            background-color: $white-color;
-          }
-          //   Reponsive
-          @include ResponsiveMobile() {
-            // margin
-            margin-top: 0px;
-            //   padding
-            padding: 4px 18px;
-          }
+        @include ResponsiveMobile() {
+          @include ServiceBoxes(250px, 180px, $white-color, 12px);
         }
       }
     }

@@ -573,6 +573,7 @@ main #about .right__box p {
 }
 
 main #service {
+  position: relative;
   background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -592,7 +593,8 @@ main #service {
 
 @media screen and (max-width: 767px) {
   main #service {
-    gap: 30px;
+    overflow-y: hidden;
+    gap: 15px;
   }
 }
 
@@ -606,6 +608,7 @@ main #service .bg__img {
 }
 
 main #service .service__title__wrapper {
+  position: relative;
   z-index: 100;
 }
 
@@ -613,6 +616,16 @@ main #service .service__title__wrapper .service__title {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 2.7rem;
   color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__title__wrapper .service__title {
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 480px;
+    left: 80px;
+  }
 }
 
 main #service .service__contents__wrapper {
@@ -625,24 +638,28 @@ main #service .service__contents__wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
 }
 
 @media screen and (max-width: 767px) {
   main #service .service__contents__wrapper {
+    padding-top: 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 20px;
   }
 }
 
-main #service .service__contents__wrapper .website {
-  width: 400px;
-  height: 500px;
+main #service .service__contents__wrapper .website,
+main #service .service__contents__wrapper .newsletter,
+main #service .service__contents__wrapper .hosting {
+  width: 250px;
+  height: 280px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -650,173 +667,101 @@ main #service .service__contents__wrapper .website {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5px;
-}
-
-@media screen and (max-width: 850px) {
-  main #service .service__contents__wrapper .website {
-    width: 300px;
-    height: 400px;
-    background-color: #fff;
-    border-radius: 20px;
-  }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
-  main #service .service__contents__wrapper .website {
-    width: 300px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 20px;
-    gap: 3px;
+  main #service .service__contents__wrapper .website,
+  main #service .service__contents__wrapper .newsletter,
+  main #service .service__contents__wrapper .hosting {
+    gap: 5px;
   }
 }
 
-main #service .service__contents__wrapper .website span {
-  font-size: 5rem;
+main #service .service__contents__wrapper .website span,
+main #service .service__contents__wrapper .newsletter span,
+main #service .service__contents__wrapper .hosting span {
+  font-size: 2.2rem;
   color: #575757;
 }
 
-@media screen and (max-width: 767px) {
-  main #service .service__contents__wrapper .website span {
-    font-size: 3rem;
-  }
-}
-
-main #service .service__contents__wrapper .website h1 {
-  font-family: "Noto Sans KR", sans-serif;
+main #service .service__contents__wrapper .website h1,
+main #service .service__contents__wrapper .newsletter h1,
+main #service .service__contents__wrapper .hosting h1 {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: #fc7703;
-  letter-spacing: 3px;
 }
 
-@media screen and (max-width: 767px) {
-  main #service .service__contents__wrapper .website h1 {
-    font-size: 1.6rem;
-  }
-}
-
-main #service .service__contents__wrapper .website button {
-  margin-top: 40px;
+main #service .service__contents__wrapper .website button,
+main #service .service__contents__wrapper .newsletter button,
+main #service .service__contents__wrapper .hosting button {
   font-family: "Noto Sans KR", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  color: #fff;
-  padding: 7px 28px;
-  background-color: #000;
-  border: 1px solid #000;
-  border-radius: 20px;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  font-size: 0.8rem;
 }
 
-main #service .service__contents__wrapper .website button:hover, main #service .service__contents__wrapper .website button:focus {
-  color: #000;
-  background-color: #fff;
+main #service .service__contents__wrapper .website button::after,
+main #service .service__contents__wrapper .newsletter button::after,
+main #service .service__contents__wrapper .hosting button::after {
+  display: block;
+  content: '';
+  border-bottom: 1px solid #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+main #service .service__contents__wrapper .website button:hover::after, main #service .service__contents__wrapper .website button:focus::after,
+main #service .service__contents__wrapper .newsletter button:hover::after,
+main #service .service__contents__wrapper .newsletter button:focus::after,
+main #service .service__contents__wrapper .hosting button:hover::after,
+main #service .service__contents__wrapper .hosting button:focus::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 @media screen and (max-width: 767px) {
-  main #service .service__contents__wrapper .website button {
-    margin-top: 0px;
-    padding: 4px 18px;
-  }
-}
-
-main #service .service__contents__wrapper .newsletter {
-  width: 400px;
-  height: 500px;
-  background-color: #fff;
-  border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 5px;
-}
-
-@media screen and (max-width: 850px) {
-  main #service .service__contents__wrapper .newsletter {
-    width: 300px;
-    height: 400px;
+  main #service .service__contents__wrapper .website {
+    width: 250px;
+    height: 180px;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 12px;
   }
 }
 
 @media screen and (max-width: 767px) {
   main #service .service__contents__wrapper .newsletter {
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 180px;
     background-color: #fff;
-    border-radius: 20px;
-    gap: 3px;
+    border-radius: 12px;
   }
 }
 
-main #service .service__contents__wrapper .newsletter span {
-  font-size: 5rem;
-  color: #575757;
-}
-
-@media screen and (max-width: 767px) {
-  main #service .service__contents__wrapper .newsletter span {
-    font-size: 3rem;
+@media screen and (max-width: 780px) {
+  main #service .service__contents__wrapper .hosting {
+    width: 520px;
+    height: 240px;
+    background-color: #fff;
+    border-radius: 12px;
   }
 }
 
-main #service .service__contents__wrapper .newsletter h1 {
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #fc7703;
-  letter-spacing: 3px;
-}
-
 @media screen and (max-width: 767px) {
-  main #service .service__contents__wrapper .newsletter h1 {
-    font-size: 1.6rem;
-  }
-}
-
-main #service .service__contents__wrapper .newsletter button {
-  margin-top: 40px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  color: #fff;
-  padding: 7px 28px;
-  background-color: #000;
-  border: 1px solid #000;
-  border-radius: 20px;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-
-main #service .service__contents__wrapper .newsletter button:hover, main #service .service__contents__wrapper .newsletter button:focus {
-  color: #000;
-  background-color: #fff;
-}
-
-@media screen and (max-width: 767px) {
-  main #service .service__contents__wrapper .newsletter button {
-    margin-top: 0px;
-    padding: 4px 18px;
+  main #service .service__contents__wrapper .hosting {
+    width: 250px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 12px;
   }
 }
 /*# sourceMappingURL=main.css.map */
