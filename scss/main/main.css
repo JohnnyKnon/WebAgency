@@ -232,7 +232,10 @@ main {
           align-items: center;
 }
 
-main section {
+main #home,
+main #about,
+main #service,
+main #template {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -656,8 +659,8 @@ main #service .service__contents__wrapper {
 main #service .service__contents__wrapper .website,
 main #service .service__contents__wrapper .newsletter,
 main #service .service__contents__wrapper .hosting {
-  width: 250px;
-  height: 280px;
+  width: 290px;
+  height: 330px;
   background-color: #fff;
   border-radius: 12px;
   display: -webkit-box;
@@ -689,23 +692,47 @@ main #service .service__contents__wrapper .hosting {
 main #service .service__contents__wrapper .website span,
 main #service .service__contents__wrapper .newsletter span,
 main #service .service__contents__wrapper .hosting span {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #575757;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .website span,
+  main #service .service__contents__wrapper .newsletter span,
+  main #service .service__contents__wrapper .hosting span {
+    font-size: 1.8rem;
+  }
 }
 
 main #service .service__contents__wrapper .website h1,
 main #service .service__contents__wrapper .newsletter h1,
 main #service .service__contents__wrapper .hosting h1 {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #fc7703;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .website h1,
+  main #service .service__contents__wrapper .newsletter h1,
+  main #service .service__contents__wrapper .hosting h1 {
+    font-size: 1.2rem;
+  }
 }
 
 main #service .service__contents__wrapper .website button,
 main #service .service__contents__wrapper .newsletter button,
 main #service .service__contents__wrapper .hosting button {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  main #service .service__contents__wrapper .website button,
+  main #service .service__contents__wrapper .newsletter button,
+  main #service .service__contents__wrapper .hosting button {
+    font-size: 0.7rem;
+  }
 }
 
 main #service .service__contents__wrapper .website button::after,
@@ -732,7 +759,7 @@ main #service .service__contents__wrapper .hosting button:focus::after {
 @media screen and (max-width: 767px) {
   main #service .service__contents__wrapper .website {
     width: 250px;
-    height: 180px;
+    height: 170px;
     background-color: #fff;
     border-radius: 12px;
   }
@@ -741,15 +768,15 @@ main #service .service__contents__wrapper .hosting button:focus::after {
 @media screen and (max-width: 767px) {
   main #service .service__contents__wrapper .newsletter {
     width: 250px;
-    height: 180px;
+    height: 170px;
     background-color: #fff;
     border-radius: 12px;
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 820px) {
   main #service .service__contents__wrapper .hosting {
-    width: 520px;
+    width: 590px;
     height: 240px;
     background-color: #fff;
     border-radius: 12px;
@@ -759,9 +786,262 @@ main #service .service__contents__wrapper .hosting button:focus::after {
 @media screen and (max-width: 767px) {
   main #service .service__contents__wrapper .hosting {
     width: 250px;
-    height: 180px;
+    height: 170px;
     background-color: #fff;
     border-radius: 12px;
   }
+}
+
+main #template {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 25px;
+  background-color: #eb9e5c;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fff;
+}
+
+main #template h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+main #template article {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+main #template article p {
+  text-align: justify;
+  width: 275px;
+}
+
+main #template article:nth-of-type(2) {
+  text-align: left;
+  gap: 0;
+}
+
+main #template article:nth-of-type(2) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  width: 240px;
+}
+
+main #template article:nth-of-type(2) div input {
+  height: 30px;
+}
+
+main #template article:nth-of-type(2) div #email__template {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background-color: #000;
+  font-family: "Roboto", sans-serif;
+  font-family: 300;
+  color: #fff;
+  padding: 0 10px;
+}
+
+main #template article:nth-of-type(2) div input:nth-of-type(2) {
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #fc7703;
+}
+
+main #contact {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  main #contact {
+    height: 1100px;
+    gap: 0px;
+  }
+}
+
+main #contact article {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+main #contact .contact__first__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  main #contact .contact__first__box {
+    position: relative;
+    top: 40px;
+  }
+}
+
+main #contact .contact__first__box h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: left;
+}
+
+main #contact .contact__first__box section:nth-of-type(1),
+main #contact .contact__first__box section:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+
+main #contact .contact__first__box section:nth-of-type(1) div h3,
+main #contact .contact__first__box section:nth-of-type(2) div h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+main #contact .contact__first__box section:nth-of-type(1) div input,
+main #contact .contact__first__box section:nth-of-type(2) div input {
+  width: 160px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 0 5px;
+}
+
+main #contact .contact__first__box section:nth-of-type(3) h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+main #contact .contact__first__box section:nth-of-type(3) textarea {
+  width: 330px;
+  height: 140px;
+  padding: 10px;
+}
+
+main #contact .contact__last__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+main #contact .contact__last__box h2 {
+  text-align: center;
+}
+
+main #contact .contact__last__box textarea {
+  width: 300px;
+  height: 300px;
+  resize: none;
+  padding: 10px 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.8rem;
+  color: #575757;
+  text-align: justify;
+}
+
+main #contact .contact__last__box .agree__checkbox {
+  cursor: pointer;
+}
+
+main #contact .contact__last__box .agree__checkbox label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+main #contact .contact__last__box input[type='submit'] {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+  width: 300px;
+  height: 35px;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  cursor: pointer;
+}
+
+main #contact .contact__last__box input[type='submit']:hover, main #contact .contact__last__box input[type='submit']:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+footer {
+  width: 100vw;
+  height: 100%;
+  background-color: #cfcfcf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px 0;
 }
 /*# sourceMappingURL=main.css.map */
