@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+// Variable
+// Font Family
+$kr-font-family: 'Noto Sans KR', sans-serif;
+$eng-font-family: 'Roboto', sans-serif;
+$style-font-family: 'Comforter', cursive;
+// Font Weight
+$light-weight: 300;
+$regular-weight: 400;
+$medium-weight: 500;
+$bold-weight: 700;
+$black-weight: 900;
+// color
+$white-color: #fff;
+$black-color: #000;
+$nav-black-color: rgba(0, 0, 0, 0.822);
+$grey-color: #cfcfcf;
+$dark-grey-color: #575757;
+$button-color: rgba(0, 0, 0, 0.733);
+$orange-color: #fc7703;
+$light-orange-color: #eb9e5c;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 자주쓰는 flex column 스타일
+@mixin flexboxStyle {
+  display: flex;
+  flex-direction: column;
+}
+
+// Sign Up Part-----------------------------------
+.sign__bg {
+  // size
+  width: 100vw;
+  height: 100%;
+  // position
+  position: fixed;
+  // background
+  background-color: $nav-black-color;
+  // z-index
+  z-index: 1500;
+  // opacity
+  opacity: 0;
+  // transform
+  transform: translateY(-1000px);
+  // Transition
+  transition: all 500ms ease-in-out;
+  // Close button
+  #sign__close {
+    // font
+    font-size: 2rem;
+    color: $grey-color;
+    // position
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    // z-index
+    z-index: 500;
+  }
+  // Sign Box
+  .sign__box {
+    // flex
+    @include flexboxStyle();
+    justify-content: center;
+    align-items: center;
+    // size
+    width: 100%;
+    height: 100%;
+    // position
+    position: relative;
+    // z-index
+    z-index: 400;
+
+    // Sign Up
+    #signUp {
+      // position
+      position: absolute;
+      // border
+      border-radius: 6px;
+      // size
+      width: 320px;
+      height: 620px;
+      // background
+      background-color: $white-color;
+      // flex
+      @include flexboxStyle();
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      // h1
+      h1 {
+        // font
+        font-family: $eng-font-family;
+        font-weight: $black-weight;
+        font-size: 2rem;
+        color: $dark-grey-color;
+      }
+      section:nth-of-type(1) {
+        // h2
+        h2 {
+          // font
+          font-family: $kr-font-family;
+          font-weight: $medium-weight;
+          font-size: 1rem;
+          // padding
+          padding-bottom: 3px;
+        }
+        // Agree text in Sign
+        #agree__sign {
+          // resize
+          resize: none;
+          // size
+          width: 270px;
+          height: 140px;
+          // font
+          font-family: $kr-font-family;
+          font-weight: $regular-weight;
+          font-size: 0.8rem;
+          // text
+          text-align: justify;
+          // padding
+          padding: 10px 10px;
+        }
+        // Agree check box
+        .agree__checkbox {
+          // text
+          text-align: center;
+          // label
+          label {
+            // font
+            font-family: $kr-font-family;
+            font-weight: $regular-weight;
+            font-size: 0.9rem;
+            // cursor
+            cursor: pointer;
+          }
+        }
+      }
+      // Sign Up Input Section
+      section:nth-of-type(2) {
+        // flex
+        @include flexboxStyle();
+        gap: 12px;
+        // div
+        div {
+          // h3
+          h3 {
+            // font
+            font-family: $kr-font-family;
+            font-weight: $medium-weight;
+            font-size: 1rem;
+          }
+          // input
+          input {
+            // size
+            width: 250px;
+            height: 25px;
+            // border
+            border: none;
+            border-bottom: 1px solid $black-color;
+            // font
+            font-family: $kr-font-family;
+            font-weight: $light-weight;
+            // padding
+            padding: 2px 2px;
+          }
+        }
+      }
+      section:nth-of-type(3) {
+        // flex
+        @include flexboxStyle();
+        align-items: center;
+        gap: 5px;
+        // input submit
+        input {
+          // size
+          width: 250px;
+          height: 30px;
+          // font
+          font-family: $eng-font-family;
+          font-weight: $medium-weight;
+          font-size: 1rem;
+          color: $white-color;
+          // background
+          background-color: $black-color;
+        }
+        a {
+          // font
+          font-family: $kr-font-family;
+          font-weight: $regular-weight;
+          font-size: 0.8rem;
+          color: $dark-grey-color;
+          // border
+          border-bottom: 1px solid $dark-grey-color;
+        }
+      }
+    }
+  }
+}
+// active
+.sign__bg-active {
+  // opacity
+  opacity: 1;
+  // transform
+  transform: translateY(0px);
+}
+
+// Privacy Policy-----------------------------
+.privacy__bg {
+  // position
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  // transform
+  transform: translate(-50%, -50%);
+  // size
+  width: 300px;
+  height: 500px;
+  // background
+  background-color: $white-color;
+  // border
+  border-radius: 10px;
+  // box shadow
+  box-shadow: 5px 5px 16px 2px rgba(0, 0, 0, 0.71);
+  // z-index
+  z-index: 1600;
+  // opacity
+  opacity: 0;
+  // margin
+  margin-top: 2000px;
+  // transition
+  transition: all 500ms ease-in-out;
+
+  //   Privacy Contents
+  .privacy__contents {
+    // position
+    position: relative;
+    // size
+    width: 100%;
+    height: 100%;
+    // flex
+    @include flexboxStyle();
+    justify-content: center;
+    align-items: center;
+    // Privacy Close btn
+    #privacy__close {
+      // position
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      // font
+      font-size: 1.5rem;
+    }
+    // article
+    article {
+      // flex
+      @include flexboxStyle();
+      gap: 10px;
+      //   Title
+      h2 {
+        // font
+        font-family: $eng-font-family;
+        font-size: 1.2rem;
+      }
+      textarea {
+        // resize
+        resize: none;
+        // size
+        width: 250px;
+        height: 400px;
+        // text
+        text-align: justify;
+        // padding
+        padding: 10px 10px;
+        // font
+        font-family: $kr-font-family;
+        font-weight: $regular-weight;
+      }
+    }
+  }
+}
+// Privacy Acitve
+.privacy__bg-active {
+  // opacity
+  opacity: 1;
+  // margin
+  margin-top: 0;
+}

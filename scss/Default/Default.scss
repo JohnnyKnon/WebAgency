@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+// Variable
+// Font Family
+$kr-font-family: 'Noto Sans KR', sans-serif;
+$eng-font-family: 'Roboto', sans-serif;
+$style-font-family: 'Comforter', cursive;
+// Font Weight
+$light-weight: 300;
+$regular-weight: 400;
+$medium-weight: 500;
+$bold-weight: 700;
+$black-weight: 900;
+// color
+$white-color: #fff;
+$black-color: #000;
+$nav-black-color: rgba(0, 0, 0, 0.822);
+$grey-color: #cfcfcf;
+$dark-grey-color: #575757;
+$button-color: rgba(0, 0, 0, 0.733);
+$orange-color: #fc7703;
+$light-orange-color: #eb9e5c;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  // size
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  // background
+  background-color: $grey-color;
+  // border
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  // background
+  background-color: $nav-black-color;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+
+// 자주쓰는 flex column 스타일
+@mixin flexboxStyle {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin ResponsiveMobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin ResponsiveSmallTablet {
+  @media screen and (max-width: 820px) {
+    @content;
+  }
+}
+
+@mixin ResponsiveTablet {
+  @media screen and (max-width: 912px) {
+    @content;
+  }
+}
+
+//  nav
+nav {
+  // position
+  position: fixed;
+  // size
+  width: 100vw;
+  // flex
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // z-index
+  z-index: 1200;
+  // padding
+  padding: 15px 0;
+
+  // transition
+  transition: all 300ms ease-in-out;
+
+  // logo
+  & > a {
+    // font
+    font-family: $eng-font-family;
+    font-weight: $black-weight;
+    font-size: 2rem;
+    color: $white-color;
+    // padding
+    padding-left: 20px;
+  }
+  .menubar-wrapper {
+    // flex
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    // padding
+    padding-right: 20px;
+    button {
+      // font
+      font-family: $eng-font-family;
+      font-size: 0.8rem;
+      font-weight: $bold-weight;
+      color: $white-color;
+      // padding
+      padding: 4px 12px;
+      // border
+      border: 1px solid $white-color;
+      border-radius: 4px;
+      // transition
+      transition: all 300ms ease-in;
+      // hover
+      &:hover,
+      &:focus {
+        // background
+        background-color: $white-color;
+        // font
+        color: $black-color;
+      }
+    }
+    .hamburger {
+      cursor: pointer;
+      span {
+        // position
+        position: relative;
+        // display
+        display: block;
+        // size
+        height: 2px;
+        // background
+        background-color: $white-color;
+        // transition
+        transition: all 200ms ease-in;
+      }
+      .line-1 {
+        // size
+        width: 25px;
+      }
+      .line-2 {
+        // size
+        width: 30px;
+        // margin
+        margin-top: 7px;
+      }
+      .line-3 {
+        // size
+        width: 20px;
+        // margin
+        margin-top: 7px;
+      }
+      // hover
+      &:hover,
+      &:focus {
+        .line-1 {
+          // size
+          width: 30px;
+        }
+        .line-3 {
+          // size
+          width: 30px;
+        }
+      }
+      // Toggle Open
+      .line-1-active {
+        // width
+        width: 30px;
+        // tranform
+        transform: rotate(50deg);
+        // position
+        top: 4px;
+      }
+      .line-2-active {
+        display: none;
+      }
+      .line-3-active {
+        // width
+        width: 30px;
+        // transform
+        transform: rotate(-50deg);
+        // position
+        top: -4px;
+      }
+    }
+  }
+}
+.navbar--dark {
+  // background
+  background-color: $nav-black-color;
+}
+
+aside {
+  // position
+  position: fixed;
+  right: 0;
+  // flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // size
+  width: 250px;
+  height: 100vh;
+  // transform
+  transform: translateX(800px);
+  // transition
+  transition: all 400ms ease-in-out;
+  // opacity
+  opacity: 0;
+  // background
+  background-color: $nav-black-color;
+  // z-index
+  z-index: 1100;
+  // ul
+  ul {
+    // flex
+    @include flexboxStyle();
+    align-items: flex-end;
+    gap: 35px;
+
+    // li
+    li {
+      // display
+      display: block;
+      // font
+      font-family: $eng-font-family;
+      font-weight: $bold-weight;
+      font-size: 1.7rem;
+      color: $white-color;
+      // cursor
+      cursor: pointer;
+      // after
+      &::after {
+        // content
+        content: '';
+        // display
+        display: block;
+        // position
+        position: relative;
+        top: 3px;
+        // border
+        border-bottom: 1px solid $white-color;
+        // transfrom
+        transform: scaleX(0);
+        // transition
+        transition: all 200ms ease-in-out;
+      }
+      &:hover,
+      &:focus {
+        &::after {
+          // transform
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+// open
+.navbar__menu-active {
+  // transform
+  transform: translateX(0);
+  // opacity
+  opacity: 1;
+}
+
+// Footer--------------------------------------
+footer {
+  // size
+  width: 100vw;
+  height: 100%;
+  // background
+  background-color: $grey-color;
+  // flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 160px;
+  // padding
+  padding: 20px 0;
+  // First Box
+  section:nth-of-type(1) {
+    // title
+    h1 {
+      // font
+      font-family: $eng-font-family;
+      font-weight: $black-weight;
+      font-size: 2.2rem;
+      color: $dark-grey-color;
+    }
+    // First box Contents
+    p {
+      // font
+      font-family: $kr-font-family;
+      font-weight: $regular-weight;
+      font-size: 0.9rem;
+      // padding
+      padding: 10px 10px;
+      // text
+      line-height: 25px;
+      // span
+      span {
+        // font
+        font-weight: $bold-weight;
+        font-size: 0.95rem;
+      }
+      // a
+      a {
+        // font
+        font-weight: $bold-weight;
+        color: $dark-grey-color;
+        border-bottom: 1px solid $dark-grey-color;
+      }
+    }
+  }
+  // Second Box
+  section:nth-of-type(2) {
+    @include flexboxStyle();
+    align-items: flex-end;
+    gap: 25px;
+    // margin
+    margin-top: 30px;
+    @include ResponsiveMobile() {
+      // margin
+      margin-top: -100px;
+      margin-left: -5px;
+      // flex
+      align-items: center;
+    }
+    // title
+    h2 {
+      // font
+      font-family: $eng-font-family;
+      font-weight: $bold-weight;
+      font-size: 2.2rem;
+      color: $dark-grey-color;
+    }
+    // Certification
+    section {
+      // flex
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      // kidp
+      #kidp {
+        // size
+        width: 100px;
+      }
+      // women
+      #women {
+        // size
+        width: 80px;
+      }
+    }
+    // h3
+    h3 {
+      // font
+      font-family: $eng-font-family;
+      font-weight: $regular-weight;
+      // padding
+      padding: 3px 0 0 100px;
+      // border
+      border-bottom: 2px solid $black-color;
+    }
+    // Other site
+    p {
+      // margin
+      margin-top: -15px;
+      a {
+        // font
+        font-family: $kr-font-family;
+        font-weight: $medium-weight;
+        font-size: 0.8rem;
+        color: $black-color;
+        // border
+        border-bottom: 1px solid $black-color;
+        // padding
+        padding: 0 3px;
+        // margin
+        margin: 0 3px;
+      }
+    }
+    // copyright
+    h6 {
+      // font
+      font-family: $eng-font-family;
+      font-weight: $regular-weight;
+      color: $dark-grey-color;
+    }
+  }
+}
