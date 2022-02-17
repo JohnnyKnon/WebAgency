@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #cfcfcf;
+  background-color: #9b9b9b;
   border-radius: 5px;
 }
 
@@ -213,6 +213,13 @@ aside ul li:hover::after, aside ul li:focus::after {
           transform: scaleX(1);
 }
 
+aside ul li a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fc7703;
+}
+
 .navbar__menu-active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -236,6 +243,7 @@ footer {
       flex-wrap: wrap;
   gap: 160px;
   padding: 20px 0;
+  z-index: 1600;
 }
 
 footer section:nth-of-type(1) h1 {

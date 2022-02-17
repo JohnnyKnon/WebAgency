@@ -19,6 +19,7 @@ $dark-grey-color: #575757;
 $button-color: rgba(0, 0, 0, 0.733);
 $orange-color: #fc7703;
 $light-orange-color: #eb9e5c;
+$scrollbar-thumb-grey: #9b9b9b;
 
 * {
   margin: 0;
@@ -36,7 +37,7 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb {
   // background
-  background-color: $grey-color;
+  background-color: $scrollbar-thumb-grey;
   // border
   border-radius: 5px;
 }
@@ -273,6 +274,14 @@ aside {
           transform: scaleX(1);
         }
       }
+      // admin a
+      a {
+        // font
+        font-family: $kr-font-family;
+        font-weight: $regular-weight;
+        font-size: 1.2rem;
+        color: $orange-color;
+      }
     }
   }
 }
@@ -299,6 +308,8 @@ footer {
   gap: 160px;
   // padding
   padding: 20px 0;
+  // z-index
+  z-index: 1600;
   // First Box
   section:nth-of-type(1) {
     // title

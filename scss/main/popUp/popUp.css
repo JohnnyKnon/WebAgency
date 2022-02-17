@@ -186,8 +186,8 @@
   z-index: 1600;
   opacity: 0;
   margin-top: 2000px;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+  -webkit-transition: all 450ms ease-in-out;
+  transition: all 450ms ease-in-out;
 }
 
 .privacy__bg .privacy__contents {
