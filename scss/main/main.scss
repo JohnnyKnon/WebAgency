@@ -294,7 +294,6 @@ aside {
   // opacity
   opacity: 1;
 }
-
 // Main
 main {
   // flex
@@ -952,7 +951,7 @@ main {
   }
 }
 
-// Footer
+// Footer--------------------------------------
 footer {
   // size
   width: 100vw;
@@ -964,7 +963,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 140px;
+  gap: 160px;
   // padding
   padding: 20px 0;
   // First Box
@@ -998,6 +997,7 @@ footer {
         // font
         font-weight: $bold-weight;
         color: $dark-grey-color;
+        border-bottom: 1px solid $dark-grey-color;
       }
     }
   }
@@ -1007,7 +1007,7 @@ footer {
     align-items: flex-end;
     gap: 25px;
     // margin
-    margin-top: 70px;
+    margin-top: 30px;
     @include ResponsiveMobile() {
       // margin
       margin-top: -100px;
@@ -1077,4 +1077,181 @@ footer {
       color: $dark-grey-color;
     }
   }
+}
+
+// Sign Up Part-----------------------------------
+.sign__bg {
+  // size
+  width: 100vw;
+  height: 100%;
+  // position
+  position: fixed;
+  // background
+  background-color: $nav-black-color;
+  // z-index
+  z-index: 1500;
+  // opacity
+  opacity: 0;
+  // transform
+  transform: translateY(-1000px);
+  // Transition
+  transition: all 500ms ease-in-out;
+  // Close button
+  #sign__close {
+    // font
+    font-size: 2rem;
+    color: $grey-color;
+    // position
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    // z-index
+    z-index: 500;
+  }
+  // Sign Box
+  .sign__box {
+    // flex
+    @include flexboxStyle();
+    justify-content: center;
+    align-items: center;
+    // size
+    width: 100%;
+    height: 100%;
+    // position
+    position: relative;
+    // z-index
+    z-index: 400;
+
+    // Sign Up
+    #signUp {
+      // position
+      position: absolute;
+      // border
+      border-radius: 6px;
+      // size
+      width: 320px;
+      height: 620px;
+      // background
+      background-color: $white-color;
+      // flex
+      @include flexboxStyle();
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      // h1
+      h1 {
+        // font
+        font-family: $eng-font-family;
+        font-weight: $black-weight;
+        font-size: 2rem;
+        color: $dark-grey-color;
+      }
+      section:nth-of-type(1) {
+        // h2
+        h2 {
+          // font
+          font-family: $kr-font-family;
+          font-weight: $medium-weight;
+          font-size: 1rem;
+          // padding
+          padding-bottom: 3px;
+        }
+        // Agree text in Sign
+        #agree__sign {
+          // resize
+          resize: none;
+          // size
+          width: 270px;
+          height: 140px;
+          // font
+          font-family: $kr-font-family;
+          font-weight: $regular-weight;
+          font-size: 0.8rem;
+          // text
+          text-align: justify;
+          // padding
+          padding: 10px 10px;
+        }
+        // Agree check box
+        .agree__checkbox {
+          // text
+          text-align: center;
+          // label
+          label {
+            // font
+            font-family: $kr-font-family;
+            font-weight: $regular-weight;
+            font-size: 0.9rem;
+            // cursor
+            cursor: pointer;
+          }
+        }
+      }
+      // Sign Up Input Section
+      section:nth-of-type(2) {
+        // flex
+        @include flexboxStyle();
+        gap: 12px;
+        // div
+        div {
+          // h3
+          h3 {
+            // font
+            font-family: $kr-font-family;
+            font-weight: $medium-weight;
+            font-size: 1rem;
+          }
+          // input
+          input {
+            // size
+            width: 250px;
+            height: 25px;
+            // border
+            border: none;
+            border-bottom: 1px solid $black-color;
+            // font
+            font-family: $kr-font-family;
+            font-weight: $light-weight;
+            // padding
+            padding: 2px 2px;
+          }
+        }
+      }
+      section:nth-of-type(3) {
+        // flex
+        @include flexboxStyle();
+        align-items: center;
+        gap: 5px;
+        // input submit
+        input {
+          // size
+          width: 250px;
+          height: 30px;
+          // font
+          font-family: $eng-font-family;
+          font-weight: $medium-weight;
+          font-size: 1rem;
+          color: $white-color;
+          // background
+          background-color: $black-color;
+        }
+        a {
+          // font
+          font-family: $kr-font-family;
+          font-weight: $regular-weight;
+          font-size: 0.8rem;
+          color: $dark-grey-color;
+          // border
+          border-bottom: 1px solid $dark-grey-color;
+        }
+      }
+    }
+  }
+}
+// active
+.sign__bg-active {
+  // opacity
+  opacity: 1;
+  // transform
+  transform: translateY(0px);
 }
