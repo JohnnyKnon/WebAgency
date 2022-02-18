@@ -25,7 +25,7 @@
       <!-- Sign box -->
       <section class="sign__box">
         <!-- Sign Up -->
-        <section id="signUp">
+        <section class="signUp">
           <h1>Sign Up</h1>
           <section>
             <h2>개인정보 약관동의</h2>
@@ -218,13 +218,43 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
                 type="tel"
                 name="phone"
                 id="phone__text"
-                placeholder="연락처를 입력해주세요."
+                placeholder="Ex). 010-0000-0000"
               />
             </div>
           </section>
           <section>
-            <input type="submit" id="contact__submit__btn" value="Sign Up" />
+            <input type="submit" id="signUp__submit__btn" value="Sign Up" />
             <a id="signIn__btn">계정이 있으시다면 Click..</a>
+          </section>
+        </section>
+        <section class="signIn">
+          <h1>Sign In</h1>
+          <section>
+            <div>
+              <h3 class="email__title">E-mail</h3>
+              <input
+                type="email"
+                name="email"
+                id="email__text"
+                placeholder="example@webffle.com"
+              />
+            </div>
+            <div>
+              <h3 class="pass__title">패스워드</h3>
+              <input
+                type="password"
+                name="password"
+                id="phone__text"
+                placeholder="패스워드를 입력해주세요."
+              />
+            </div>
+          </section>
+          <section>
+            <input type="submit" id="signIn__submit__btn" value="Sign In" />
+            <div>
+              <a id="account__forget" href="#">아이디, 비밀번호 찾기</a>
+              <a id="signUp__move__btn">회원가입</a>
+            </div>
           </section>
         </section>
       </section>
@@ -473,14 +503,14 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
           <section
             class="newsletter"
             data-aos="fade-up"
-            data-aos-duration="2000"
+            data-aos-duration="1500"
           >
             <span><i class="fa-solid fa-newspaper"></i></span>
             <h1>뉴스레터<br />이용안내</h1>
             <button>보러가기 <i class="fa-solid fa-angle-right"></i></button>
           </section>
           <!-- 호스팅 박스 -->
-          <section class="hosting" data-aos="fade-up" data-aos-duration="3000">
+          <section class="hosting" data-aos="fade-up" data-aos-duration="2000">
             <span><i class="fa-solid fa-server"></i></span>
             <h1>호스팅<br />이용안내</h1>
             <button>보러가기 <i class="fa-solid fa-angle-right"></i></button>
@@ -781,6 +811,7 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
     </footer>
     <!-- JS Link -->
     <script src="./js/main/main.js"></script>
+    <script src="./js/sign/sign.js"></script>
     <script src="./js/nav/nav.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

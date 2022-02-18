@@ -13,8 +13,8 @@
   background-color: rgba(0, 0, 0, 0.822);
   z-index: 1500;
   opacity: 0;
-  -webkit-transform: translateY(-1000px);
-          transform: translateY(-1000px);
+  -webkit-transform: translateX(2000px);
+          transform: translateX(2000px);
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
@@ -48,12 +48,17 @@
   z-index: 400;
 }
 
-.sign__bg .sign__box #signUp {
+.sign__bg .sign__box .signUp {
   position: absolute;
   border-radius: 6px;
   width: 320px;
   height: 620px;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   background-color: #fff;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,21 +75,21 @@
   gap: 15px;
 }
 
-.sign__bg .sign__box #signUp h1 {
+.sign__bg .sign__box .signUp h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 2rem;
   color: #575757;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(1) h2 {
+.sign__bg .sign__box .signUp section:nth-of-type(1) h2 {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   padding-bottom: 3px;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(1) #agree__sign {
+.sign__bg .sign__box .signUp section:nth-of-type(1) #agree__sign {
   resize: none;
   width: 270px;
   height: 140px;
@@ -95,18 +100,18 @@
   padding: 10px 10px;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(1) .agree__checkbox {
+.sign__bg .sign__box .signUp section:nth-of-type(1) .agree__checkbox {
   text-align: center;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(1) .agree__checkbox label {
+.sign__bg .sign__box .signUp section:nth-of-type(1) .agree__checkbox label {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(2) {
+.sign__bg .sign__box .signUp section:nth-of-type(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,13 +122,13 @@
   gap: 12px;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(2) div h3 {
+.sign__bg .sign__box .signUp section:nth-of-type(2) div h3 {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   font-size: 1rem;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(2) div input {
+.sign__bg .sign__box .signUp section:nth-of-type(2) div input {
   width: 250px;
   height: 25px;
   border: none;
@@ -133,7 +138,7 @@
   padding: 2px 2px;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(3) {
+.sign__bg .sign__box .signUp section:nth-of-type(3) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,10 +149,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(3) input {
+.sign__bg .sign__box .signUp section:nth-of-type(3) input {
+  cursor: pointer;
   width: 250px;
   height: 30px;
   font-family: "Roboto", sans-serif;
@@ -157,18 +163,146 @@
   background-color: #000;
 }
 
-.sign__bg .sign__box #signUp section:nth-of-type(3) a {
+.sign__bg .sign__box .signUp section:nth-of-type(3) a {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
   color: #575757;
   border-bottom: 1px solid #575757;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.sign__bg .sign__box .signUp section:nth-of-type(3) a:hover, .sign__bg .sign__box .signUp section:nth-of-type(3) a:focus {
+  color: #fc7703;
+  border-color: #fc7703;
+}
+
+.sign__bg .sign__box .signUp-stop {
+  opacity: 0;
+  -webkit-transform: translateY(2000px);
+          transform: translateY(2000px);
+}
+
+.sign__bg .sign__box .signIn {
+  position: absolute;
+  border-radius: 6px;
+  width: 320px;
+  height: 500px;
+  opacity: 0;
+  -webkit-transform: translateY(-2000px);
+          transform: translateY(-2000px);
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.sign__bg .sign__box .signIn h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #575757;
+  margin-bottom: 40px;
+}
+
+.sign__bg .sign__box .signIn section:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+.sign__bg .sign__box .signIn section:nth-of-type(1) div h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.sign__bg .sign__box .signIn section:nth-of-type(1) div input {
+  width: 250px;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  padding: 2px 2px;
+}
+
+.sign__bg .sign__box .signIn section:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.sign__bg .sign__box .signIn section:nth-of-type(2) input {
+  cursor: pointer;
+  width: 250px;
+  height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.sign__bg .sign__box .signIn section:nth-of-type(2) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+}
+
+.sign__bg .sign__box .signIn section:nth-of-type(2) div a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #575757;
+  border-bottom: 1px solid #575757;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.sign__bg .sign__box .signIn section:nth-of-type(2) div a:hover, .sign__bg .sign__box .signIn section:nth-of-type(2) div a:focus {
+  color: #fc7703;
+  border-color: #fc7703;
+}
+
+.sign__bg .sign__box .signIn-active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .sign__bg-active {
   opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .privacy__bg {

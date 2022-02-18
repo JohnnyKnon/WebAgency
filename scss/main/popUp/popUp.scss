@@ -46,7 +46,7 @@ $light-orange-color: #eb9e5c;
   // opacity
   opacity: 0;
   // transform
-  transform: translateY(-1000px);
+  transform: translateX(2000px);
   // Transition
   transition: all 500ms ease-in-out;
   // Close button
@@ -75,8 +75,8 @@ $light-orange-color: #eb9e5c;
     // z-index
     z-index: 400;
 
-    // Sign Up
-    #signUp {
+    // Sign Up----------
+    .signUp {
       // position
       position: absolute;
       // border
@@ -84,8 +84,14 @@ $light-orange-color: #eb9e5c;
       // size
       width: 320px;
       height: 620px;
+      // opacity
+      opacity: 1;
+      // transform
+      transform: translateY(0);
       // background
       background-color: $white-color;
+      // Transition
+      transition: all 500ms ease-in-out;
       // flex
       @include flexboxStyle();
       justify-content: center;
@@ -99,6 +105,7 @@ $light-orange-color: #eb9e5c;
         font-size: 2rem;
         color: $dark-grey-color;
       }
+      // TextArea section
       section:nth-of-type(1) {
         // h2
         h2 {
@@ -174,9 +181,11 @@ $light-orange-color: #eb9e5c;
         // flex
         @include flexboxStyle();
         align-items: center;
-        gap: 5px;
+        gap: 10px;
         // input submit
         input {
+          // cursor
+          cursor: pointer;
           // size
           width: 250px;
           height: 30px;
@@ -196,8 +205,137 @@ $light-orange-color: #eb9e5c;
           color: $dark-grey-color;
           // border
           border-bottom: 1px solid $dark-grey-color;
+          // transition
+          transition: all 300ms ease-in-out;
+          // hover
+          &:hover,
+          &:focus {
+            // font
+            color: $orange-color;
+            border-color: $orange-color;
+          }
         }
       }
+    }
+    // Sign Up stop
+    .signUp-stop {
+      // opacity
+      opacity: 0;
+      // transform
+      transform: translateY(2000px);
+    }
+    // Sign In----------
+    .signIn {
+      // position
+      position: absolute;
+      // border
+      border-radius: 6px;
+      // size
+      width: 320px;
+      height: 500px;
+      // opacity
+      opacity: 0;
+      // transform
+      transform: translateY(-2000px);
+      // background
+      background-color: $white-color;
+      // flex
+      @include flexboxStyle();
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      // Transition
+      transition: all 500ms ease-in-out;
+      // h1
+      h1 {
+        // font
+        font-family: $eng-font-family;
+        font-weight: $black-weight;
+        font-size: 2rem;
+        color: $dark-grey-color;
+        // margin
+        margin-bottom: 40px;
+      }
+      section:nth-of-type(1) {
+        // flex
+        @include flexboxStyle();
+        gap: 50px;
+        // div
+        div {
+          // h3
+          h3 {
+            // font
+            font-family: $kr-font-family;
+            font-weight: $medium-weight;
+            font-size: 1rem;
+          }
+          // input
+          input {
+            // size
+            width: 250px;
+            height: 25px;
+            // border
+            border: none;
+            border-bottom: 1px solid $black-color;
+            // font
+            font-family: $kr-font-family;
+            font-weight: $light-weight;
+            // padding
+            padding: 2px 2px;
+          }
+        }
+      }
+      section:nth-of-type(2) {
+        // flex
+        @include flexboxStyle();
+        align-items: center;
+        gap: 15px;
+        // input submit
+        input {
+          // cursor
+          cursor: pointer;
+          // size
+          width: 250px;
+          height: 30px;
+          // font
+          font-family: $eng-font-family;
+          font-weight: $medium-weight;
+          font-size: 1rem;
+          color: $white-color;
+          // background
+          background-color: $black-color;
+        }
+        div {
+          // flex
+          display: flex;
+          gap: 80px;
+          a {
+            // font
+            font-family: $kr-font-family;
+            font-weight: $regular-weight;
+            font-size: 0.8rem;
+            color: $dark-grey-color;
+            // border
+            border-bottom: 1px solid $dark-grey-color;
+            // transition
+            transition: all 300ms ease-in-out;
+            // hover
+            &:hover,
+            &:focus {
+              // font
+              color: $orange-color;
+              border-color: $orange-color;
+            }
+          }
+        }
+      }
+    }
+    // signIn Active
+    .signIn-active {
+      // opacity
+      opacity: 1;
+      // transform
+      transform: translateY(0);
     }
   }
 }
@@ -206,7 +344,7 @@ $light-orange-color: #eb9e5c;
   // opacity
   opacity: 1;
   // transform
-  transform: translateY(0px);
+  transform: translateX(0px);
 }
 
 // Privacy Policy-----------------------------
