@@ -76,6 +76,22 @@ nav .menubar-wrapper {
   padding-right: 20px;
 }
 
+nav .menubar-wrapper #returnToMain {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0 4px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+nav .menubar-wrapper #returnToMain:hover, nav .menubar-wrapper #returnToMain:focus {
+  color: #eb9e5c;
+  border-color: #eb9e5c;
+}
+
 nav .menubar-wrapper button {
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
@@ -246,6 +262,13 @@ footer {
   z-index: 1600;
 }
 
+@media screen and (max-width: 767px) {
+  footer section:nth-of-type(1) {
+    position: relative;
+    top: 20px;
+  }
+}
+
 footer section:nth-of-type(1) h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -257,7 +280,7 @@ footer section:nth-of-type(1) p {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
-  padding: 10px 10px;
+  padding: 3px 3px;
   line-height: 25px;
 }
 
@@ -284,7 +307,7 @@ footer section:nth-of-type(2) {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 25px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 767px) {
@@ -304,7 +327,7 @@ footer section:nth-of-type(2) h2 {
   color: #575757;
 }
 
-footer section:nth-of-type(2) section {
+footer section:nth-of-type(2) figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,17 +340,18 @@ footer section:nth-of-type(2) section {
   gap: 20px;
 }
 
-footer section:nth-of-type(2) section #kidp {
+footer section:nth-of-type(2) figure #kidp {
   width: 100px;
 }
 
-footer section:nth-of-type(2) section #women {
+footer section:nth-of-type(2) figure #women {
   width: 80px;
 }
 
 footer section:nth-of-type(2) h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  margin-top: 10px;
   padding: 3px 0 0 100px;
   border-bottom: 2px solid #000;
 }

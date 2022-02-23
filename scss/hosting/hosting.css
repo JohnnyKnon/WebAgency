@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+main {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100%;
+}
+
+main #apply,
+main #add,
+main #detail {
+  width: 100vw;
+  height: 800px;
+}
+
+main #main__bg__image {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  background: url(../../images/subpage/hosting/bg/hostingBG.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 912px) {
+  main #main__bg__image {
+    height: 1400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main #main__bg__image {
+    height: 900px;
+  }
+}
+
+main header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 70px;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.479);
+  z-index: 400;
+}
+
+main header article {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  max-width: 1200px;
+  width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+@media screen and (max-width: 912px) {
+  main header article {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main header article {
+    padding-left: 30px;
+  }
+}
+
+main header article h1 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #fff;
+  letter-spacing: 3px;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  main header article h1 {
+    font-size: 2rem;
+  }
+}
+
+main header article p {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #8f8f8f;
+}
+
+@media screen and (max-width: 767px) {
+  main header article p {
+    font-size: 0.9rem;
+  }
+}
+
+main #apply {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 400;
+}
+
+@media screen and (max-width: 912px) {
+  main #apply {
+    height: 1200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main #apply {
+    height: 710px;
+  }
+}
+
+main #apply .apply__box {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  main #apply .apply__box {
+    max-width: 10000px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 100px;
+    margin-top: -200px;
+    margin-left: 2000px;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+}
+
+main #apply .apply__box > section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  width: 300px;
+  height: 350px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 19px 0px rgba(0, 0, 0, 0.84);
+          box-shadow: 0px 1px 19px 0px rgba(0, 0, 0, 0.84);
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  border-radius: 5px;
+}
+
+main #apply .apply__box > section:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+main #apply .apply__box span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #8f8f8f;
+}
+
+main #apply .apply__box section > p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-left: 20px;
+}
+
+main #apply .apply__box section h2 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fc7703;
+  padding-left: 20px;
+}
+
+main #apply .apply__box section section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+}
+
+main #apply .apply__box section .apply__price {
+  gap: 30px;
+}
+
+main #apply .apply__box section .apply__price h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #575757;
+}
+
+main #apply .apply__box section .apply__price button {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #fc7703;
+  padding: 10px 20px;
+}
+
+main #apply .apply__box section .price-premium-plus {
+  gap: 14px;
+}
+
+main #apply .apply__box section .apply__hdd {
+  gap: 25px;
+}
+
+main #apply .apply__box section .apply__hdd-modify {
+  gap: 30px;
+}
+
+main #apply .apply__box section .apply__trafic {
+  gap: 16px;
+}
+
+main #apply .apply__box section .apply__trafic-modify {
+  gap: 7px;
+}
+
+main #apply .apply__box section .db-1 {
+  gap: 55px;
+}
+
+main #apply .apply__box section .db-2 {
+  gap: 40px;
+}
+
+main #apply .apply__box section .db-3 {
+  gap: 34px;
+}
+
+main #apply .apply__box section .db-4 {
+  gap: 55px;
+}
+
+main #apply .apply__box section .db-5 {
+  gap: 65px;
+}
+
+main #apply .apply__box section .domain-1 {
+  gap: 41px;
+}
+
+main #apply .apply__box section .domain-2 {
+  gap: 26px;
+}
+
+main #apply .apply__box section .domain-3 {
+  gap: 21px;
+}
+
+main #apply .apply__box section .domain-4 {
+  gap: 11px;
+}
+
+main #apply .apply__box section .domain-5 {
+  gap: 10px;
+}
+
+main #apply .apply__box #contact {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #apply .apply__box #contact h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #8f8f8f;
+}
+
+main #apply .apply__box #contact a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #000;
+  border-bottom: 1px solid #000;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+main #apply .apply__box #contact a:hover, main #apply .apply__box #contact a:focus {
+  color: #fc7703;
+  border-color: #fc7703;
+}
+
+main #apply .slide__btn {
+  display: none;
+  position: absolute;
+  top: 430px;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  main #apply .slide__btn {
+    display: block;
+  }
+}
+
+main #apply .prev {
+  left: 8.5px;
+}
+
+main #apply .next {
+  right: 8.5px;
+}
+
+main #apply #dots__box {
+  display: none;
+  position: absolute;
+  top: 636px;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  main #apply #dots__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+main #apply #dots__box .dot {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  main #apply #dots__box .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+main #apply #dots__box .active,
+main #apply #dots__box .dot:hover {
+  background-color: #fff;
+}
+
+main #add {
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 80px;
+}
+
+main #add table {
+  border: 2px solid #000;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  z-index: 300;
+}
+
+main #add th,
+main #add td {
+  border: 1px solid #f5b47a;
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 767px) {
+  main #add th,
+  main #add td {
+    padding: 4px 6px;
+    font-size: 0.9rem;
+  }
+}
+
+main #add th {
+  background-color: #fc7703;
+  font-weight: 300;
+  color: #fff;
+}
+
+main #add th span {
+  font-weight: 500;
+}
+
+main #add #hdd th,
+main #add #hdd td {
+  padding: 10px 21.9px;
+}
+
+@media screen and (max-width: 767px) {
+  main #add #hdd th,
+  main #add #hdd td {
+    padding: 4px 7.6px;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  main #add {
+    height: 1200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main #add {
+    height: 950px;
+  }
+}
+
+main #add h1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fc7703;
+}
+
+main #add article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+}
+
+@media screen and (max-width: 912px) {
+  main #add article section {
+    position: relative;
+    left: 21.4px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main #add article section {
+    left: 7px;
+  }
+}
+
+main #add article section #trafic {
+  position: relative;
+  top: -29px;
+}
+
+@media screen and (max-width: 912px) {
+  main #add article section #trafic {
+    top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+main #add article section li {
+  display: inline-block;
+  width: 500px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #575757;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  main #add article section li {
+    width: 330px;
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=hosting.css.map */
