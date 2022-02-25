@@ -253,35 +253,39 @@ main #apply .apply__box section .apply__hdd {
 }
 
 main #apply .apply__box section .apply__hdd-modify {
-  gap: 30px;
+  gap: 40.5px;
 }
 
 main #apply .apply__box section .apply__trafic {
-  gap: 16px;
+  gap: 19px;
+}
+
+main #apply .apply__box section .apply__trafic-modify-basic {
+  gap: 23px;
 }
 
 main #apply .apply__box section .apply__trafic-modify {
-  gap: 7px;
+  gap: 9px;
 }
 
 main #apply .apply__box section .db-1 {
-  gap: 55px;
+  gap: 12px;
 }
 
 main #apply .apply__box section .db-2 {
-  gap: 40px;
+  gap: 9px;
 }
 
 main #apply .apply__box section .db-3 {
-  gap: 34px;
+  gap: 0px;
 }
 
 main #apply .apply__box section .db-4 {
-  gap: 55px;
+  gap: 9px;
 }
 
 main #apply .apply__box section .db-5 {
-  gap: 65px;
+  gap: 22px;
 }
 
 main #apply .apply__box section .domain-1 {
@@ -289,19 +293,19 @@ main #apply .apply__box section .domain-1 {
 }
 
 main #apply .apply__box section .domain-2 {
-  gap: 26px;
+  gap: 38px;
 }
 
 main #apply .apply__box section .domain-3 {
-  gap: 21px;
+  gap: 29px;
 }
 
 main #apply .apply__box section .domain-4 {
-  gap: 11px;
+  gap: 29px;
 }
 
 main #apply .apply__box section .domain-5 {
-  gap: 10px;
+  gap: 42px;
 }
 
 main #apply .apply__box #contact {
@@ -532,5 +536,88 @@ main #add article section li {
     width: 330px;
     font-size: 0.8rem;
   }
+}
+
+main #detail {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0;
+}
+
+main #detail #detail__box {
+  max-width: 950px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+main #detail #detail__box h1 {
+  font-size: 2rem;
+  color: #fc7703;
+  border-bottom: 3px solid #fc7703;
+  width: 90%;
+  margin: 0 20px;
+}
+
+main #detail #detail__box details {
+  width: 90%;
+  border-bottom: 1px solid #8f8f8f;
+  padding: 20px 0;
+  margin: 0 20px;
+  cursor: pointer;
+  z-index: 600;
+}
+
+main #detail #detail__box details summary {
+  font-size: 1.3rem;
+  color: #575757;
+  padding: 20px 0;
+}
+
+main #detail #detail__box details ul {
+  padding: 0 10px;
+}
+
+main #detail #detail__box details ul li {
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding: 10px 0;
+}
+
+main #detail #detail__box .program ul li span {
+  font-weight: 700;
+}
+
+main #detail #detail__box .language ul li span {
+  color: #fc7703;
+}
+
+main #detail #detail__box .email ul .li__box {
+  display: block;
+  border-top: 2px solid #f5b47a;
+  padding: 5px 0;
+  font-weight: 700;
+}
+
+main #detail #detail__box .benefit ul li span {
+  font-weight: 700;
 }
 /*# sourceMappingURL=hosting.css.map */

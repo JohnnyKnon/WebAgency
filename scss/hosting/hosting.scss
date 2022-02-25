@@ -345,37 +345,41 @@ main {
         }
         .apply__hdd-modify {
           // flex
-          gap: 30px;
+          gap: 40.5px;
         }
         // Trafic
         .apply__trafic {
           // flex
-          gap: 16px;
+          gap: 19px;
+        }
+        .apply__trafic-modify-basic {
+          // flex
+          gap: 23px;
         }
         .apply__trafic-modify {
           // flex
-          gap: 7px;
+          gap: 9px;
         }
         // DB
         .db-1 {
           // flex
-          gap: 55px;
+          gap: 12px;
         }
         .db-2 {
           // flex
-          gap: 40px;
+          gap: 9px;
         }
         .db-3 {
           // flex
-          gap: 34px;
+          gap: 0px;
         }
         .db-4 {
           // flex
-          gap: 55px;
+          gap: 9px;
         }
         .db-5 {
           // flex
-          gap: 65px;
+          gap: 22px;
         }
         // Domain
         .domain-1 {
@@ -384,19 +388,19 @@ main {
         }
         .domain-2 {
           // flex
-          gap: 26px;
+          gap: 38px;
         }
         .domain-3 {
           // flex
-          gap: 21px;
+          gap: 29px;
         }
         .domain-4 {
           // flex
-          gap: 11px;
+          gap: 29px;
         }
         .domain-5 {
           // flex
-          gap: 10px;
+          gap: 42px;
         }
       }
       // Contact Section Style
@@ -579,5 +583,122 @@ main {
   }
   //   detail
   #detail {
+    // height
+    height: 100%;
+    // flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding
+    padding: 100px 0;
+    // detail box
+    #detail__box {
+      // max-width
+      max-width: 950px;
+      // width
+      width: 100%;
+      // flex
+      @include flexboxStyle();
+      align-items: flex-start;
+      gap: 30px;
+      // font
+      font-family: $kr-font-family;
+      // title
+      h1 {
+        // font
+        font-size: 2rem;
+        color: $orange-color;
+        // border
+        border-bottom: 3px solid $orange-color;
+        // width
+        width: 90%;
+        // padding
+        margin: 0 20px;
+      }
+      //   details total styling
+      details {
+        //   width
+        width: 90%;
+        // border
+        border-bottom: 1px solid $grey-color;
+        // padding
+        padding: 20px 0;
+        //   margin
+        margin: 0 20px;
+        // cursor
+        cursor: pointer;
+        // z-index
+        z-index: 600;
+        // summary
+        summary {
+          // font
+          font-size: 1.3rem;
+          color: $dark-grey-color;
+          // padding
+          padding: 20px 0;
+        }
+        // total ul li styling
+        ul {
+          // padding
+          padding: 0 10px;
+          li {
+            // font
+            font-weight: $regular-weight;
+            font-size: 0.8rem;
+            // padding
+            padding: 10px 0;
+          }
+        }
+      }
+      // program Styling
+      .program {
+        ul {
+          li {
+            // span
+            span {
+              // font
+              font-weight: $bold-weight;
+            }
+          }
+        }
+      }
+      // Language Styling
+      .language {
+        ul {
+          li {
+            // span
+            span {
+              color: $orange-color;
+            }
+          }
+        }
+      }
+      // email Styling
+      .email {
+        ul {
+          .li__box {
+            // block
+            display: block;
+            // border
+            border-top: 2px solid $light-orange-color;
+            // padding
+            padding: 5px 0;
+            // font
+            font-weight: $bold-weight;
+          }
+        }
+      }
+      // benfit
+      .benefit {
+        ul {
+          li {
+            span {
+              // font
+              font-weight: $bold-weight;
+            }
+          }
+        }
+      }
+    }
   }
 }
