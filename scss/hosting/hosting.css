@@ -29,9 +29,11 @@ main #main__bg__image {
   height: 1000px;
   background: url(../../images/subpage/hosting/bg/hostingBG.jpg) no-repeat center/cover;
   background-attachment: fixed;
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 973px) {
   main #main__bg__image {
     height: 1400px;
   }
@@ -54,7 +56,7 @@ main header {
   margin-top: 70px;
   width: 100%;
   height: 120px;
-  background-color: rgba(0, 0, 0, 0.479);
+  background-color: rgba(255, 255, 255, 0.664);
   z-index: 400;
 }
 
@@ -68,7 +70,7 @@ main header article {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 973px) {
   main header article {
     padding-left: 50px;
   }
@@ -84,9 +86,9 @@ main header article h1 {
   display: inline-block;
   font-weight: 700;
   font-size: 2.4rem;
-  color: #fff;
+  color: #000;
   letter-spacing: 3px;
-  padding-right: 5px;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 767px) {
@@ -99,12 +101,13 @@ main header article p {
   display: inline-block;
   font-weight: 400;
   font-size: 1.2rem;
-  color: #8f8f8f;
+  color: #575757;
 }
 
 @media screen and (max-width: 767px) {
   main header article p {
     font-size: 0.9rem;
+    padding-left: 20px;
   }
 }
 
@@ -121,7 +124,7 @@ main #apply {
   z-index: 400;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 973px) {
   main #apply {
     height: 1200px;
   }
@@ -242,6 +245,12 @@ main #apply .apply__box section .apply__price button {
   border-radius: 5px;
   background-color: #fc7703;
   padding: 10px 20px;
+  -webkit-transition: all 320ms ease-in-out;
+  transition: all 320ms ease-in-out;
+}
+
+main #apply .apply__box section .apply__price button:hover, main #apply .apply__box section .apply__price button:focus {
+  background-color: #f1a058;
 }
 
 main #apply .apply__box section .price-premium-plus {
@@ -254,6 +263,10 @@ main #apply .apply__box section .apply__hdd {
 
 main #apply .apply__box section .apply__hdd-modify {
   gap: 40.5px;
+}
+
+main #apply .apply__box section .apply__hdd-modify-2 {
+  gap: 30px;
 }
 
 main #apply .apply__box section .apply__trafic {
@@ -342,6 +355,7 @@ main #apply .slide__btn {
   top: 430px;
   font-size: 2.5rem;
   color: #fff;
+  mix-blend-mode: difference;
 }
 
 @media screen and (max-width: 767px) {
@@ -428,7 +442,7 @@ main #add table {
 
 main #add th,
 main #add td {
-  border: 1px solid #f5b47a;
+  border: 1px solid #f1a058;
   padding: 10px 20px;
 }
 
@@ -462,7 +476,7 @@ main #add #hdd td {
   }
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 973px) {
   main #add {
     height: 1200px;
   }
@@ -496,7 +510,16 @@ main #add article {
   gap: 15px;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 767px) {
+  main #add article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 973px) {
   main #add article section {
     position: relative;
     left: 21.4px;
@@ -514,7 +537,7 @@ main #add article section #trafic {
   top: -29px;
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 973px) {
   main #add article section #trafic {
     top: 0;
     margin-bottom: 20px;
@@ -612,7 +635,7 @@ main #detail #detail__box .language ul li span {
 
 main #detail #detail__box .email ul .li__box {
   display: block;
-  border-top: 2px solid #f5b47a;
+  border-top: 2px solid #f1a058;
   padding: 5px 0;
   font-weight: 700;
 }

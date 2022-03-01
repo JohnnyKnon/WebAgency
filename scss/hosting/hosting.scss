@@ -18,7 +18,7 @@ $grey-color: #8f8f8f;
 $dark-grey-color: #575757;
 $button-color: rgba(0, 0, 0, 0.733);
 $orange-color: #fc7703;
-$light-orange-color: #f5b47a;
+$light-orange-color: #f1a058;
 $scrollbar-thumb-grey: #9b9b9b;
 
 // 자주쓰는 flex column 스타일
@@ -39,7 +39,7 @@ $scrollbar-thumb-grey: #9b9b9b;
 }
 
 @mixin ResponsiveTablet {
-  @media screen and (max-width: 912px) {
+  @media screen and (max-width: 973px) {
     @content;
   }
 }
@@ -128,6 +128,8 @@ main {
     background: url(../../images/subpage/hosting/bg/hostingBG.jpg) no-repeat
       center/cover;
     background-attachment: fixed;
+    // filter
+    filter: brightness(60%);
     // Reponsive
     @include ResponsiveTablet() {
       // size
@@ -152,7 +154,7 @@ main {
     width: 100%;
     height: 120px;
     // background
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(255, 255, 255, 0.664);
     // z-index
     z-index: 400;
     // article-----
@@ -184,11 +186,11 @@ main {
         // font
         font-weight: $bold-weight;
         font-size: 2.4rem;
-        color: $white-color;
+        color: $black-color;
         // text
         letter-spacing: 3px;
         // padding
-        padding-right: 5px;
+        padding-left: 20px;
         // Responsive
         @include ResponsiveMobile() {
           font-size: 2rem;
@@ -200,9 +202,12 @@ main {
         // font
         font-weight: $regular-weight;
         font-size: 1.2rem;
-        color: $grey-color;
+        color: $dark-grey-color;
         @include ResponsiveMobile() {
+          // font
           font-size: 0.9rem;
+          // padding
+          padding-left: 20px;
         }
       }
     }
@@ -331,6 +336,14 @@ main {
             background-color: $orange-color;
             // padding
             padding: 10px 20px;
+            // transition
+            transition: all 320ms ease-in-out;
+            // hover
+            &:hover,
+            &:focus {
+              // background
+              background-color: $light-orange-color;
+            }
           }
         }
 
@@ -346,6 +359,10 @@ main {
         .apply__hdd-modify {
           // flex
           gap: 40.5px;
+        }
+        .apply__hdd-modify-2 {
+          // flex
+          gap: 30px;
         }
         // Trafic
         .apply__trafic {
@@ -446,6 +463,7 @@ main {
       // font
       font-size: 2.5rem;
       color: $white-color;
+      mix-blend-mode: difference;
       // reponsive
       @include ResponsiveMobile() {
         display: block;
@@ -536,6 +554,11 @@ main {
       align-items: center;
       flex-wrap: wrap;
       gap: 15px;
+      //   Reponsive
+      @include ResponsiveMobile() {
+        // flex
+        flex-direction: column;
+      }
       // Trafic / info box
       section {
         @include ResponsiveTablet() {
@@ -544,6 +567,7 @@ main {
           left: 21.4px;
         }
         @include ResponsiveMobile() {
+          // position
           left: 7px;
         }
         #trafic {

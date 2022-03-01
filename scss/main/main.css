@@ -682,6 +682,10 @@ main #contact {
 @media screen and (max-width: 767px) {
   main #contact {
     height: 1100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 0px;
   }
 }
@@ -777,13 +781,20 @@ main #contact .contact__last__box h2 {
 
 main #contact .contact__last__box textarea {
   width: 300px;
-  height: 300px;
+  height: 270px;
+  border: 1px solid #575757;
   resize: none;
   padding: 10px 10px;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 0.8rem;
   color: #575757;
   text-align: justify;
+}
+
+@media screen and (max-width: 767px) {
+  main #contact .contact__last__box textarea {
+    width: 330px;
+  }
 }
 
 main #contact .contact__last__box .agree__checkbox {

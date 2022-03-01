@@ -584,6 +584,7 @@ main {
       // size
       height: 1100px;
       // flex
+      flex-direction: column;
       gap: 0px;
     }
     // article
@@ -668,7 +669,9 @@ main {
       textarea {
         // size
         width: 300px;
-        height: 300px;
+        height: 270px;
+        // border
+        border: 1px solid $dark-grey-color;
         // block Resizing
         resize: none;
         // padding
@@ -679,6 +682,10 @@ main {
         color: $dark-grey-color;
         // text
         text-align: justify;
+        // Responsive
+        @include ResponsiveMobile() {
+          width: 330px;
+        }
       }
       .agree__checkbox {
         // cursor

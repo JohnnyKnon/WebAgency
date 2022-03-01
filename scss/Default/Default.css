@@ -212,7 +212,14 @@ aside ul li {
   cursor: pointer;
 }
 
-aside ul li::after {
+aside ul li a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fc7703;
+}
+
+aside ul #screen__pc__li::after {
   content: '';
   display: block;
   position: relative;
@@ -224,16 +231,9 @@ aside ul li::after {
   transition: all 200ms ease-in-out;
 }
 
-aside ul li:hover::after, aside ul li:focus::after {
+aside ul #screen__pc__li:hover::after, aside ul #screen__pc__li:focus::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-}
-
-aside ul li a {
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: #fc7703;
 }
 
 .navbar__menu-active {
@@ -260,6 +260,15 @@ footer {
   gap: 160px;
   padding: 20px 0;
   z-index: 1600;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 767px) {

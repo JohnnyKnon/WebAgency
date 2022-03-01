@@ -238,7 +238,8 @@
 
 .sign__bg .sign__box .signIn section:nth-of-type(1) div input {
   width: 250px;
-  height: 25px;
+  height: 35px;
+  font-size: 1rem;
   border: none;
   border-bottom: 1px solid #000;
   font-family: "Noto Sans KR", sans-serif;

@@ -262,7 +262,6 @@ aside {
     @include flexboxStyle();
     align-items: flex-end;
     gap: 35px;
-
     // li
     li {
       // display
@@ -274,6 +273,17 @@ aside {
       color: $white-color;
       // cursor
       cursor: pointer;
+      // admin a
+      a {
+        // font
+        font-family: $kr-font-family;
+        font-weight: $regular-weight;
+        font-size: 1.2rem;
+        color: $orange-color;
+      }
+    }
+    // li just Scroll btn
+    #screen__pc__li {
       // after
       &::after {
         // content
@@ -296,14 +306,6 @@ aside {
           // transform
           transform: scaleX(1);
         }
-      }
-      // admin a
-      a {
-        // font
-        font-family: $kr-font-family;
-        font-weight: $regular-weight;
-        font-size: 1.2rem;
-        color: $orange-color;
       }
     }
   }
@@ -333,6 +335,11 @@ footer {
   padding: 20px 0;
   // z-index
   z-index: 1600;
+  // Responsive
+  @include ResponsiveMobile() {
+    // flex
+    flex-direction: column;
+  }
   // First Box
   section:nth-of-type(1) {
     @include ResponsiveMobile() {

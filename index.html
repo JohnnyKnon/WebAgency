@@ -432,11 +432,13 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
     <!-- Side Nav Contents -->
     <aside class="navbar__menu__contents">
       <ul class="screen__pc">
-        <li data-link="#about">About Us</li>
-        <li data-link="#service">Service</li>
-        <li data-link="#template">Template</li>
-        <li data-link="#contact">Contact Us</li>
-        <li><a href="#">관리자 페이지</a></li>
+        <li id="screen__pc__li" data-link="#about">About Us</li>
+        <li id="screen__pc__li" data-link="#service">Service</li>
+        <li id="screen__pc__li" data-link="#template">Template</li>
+        <li id="screen__pc__li" data-link="#contact">Contact Us</li>
+        <li>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> 관리자 페이지</a>
+        </li>
       </ul>
     </aside>
     <!-- Main -->
@@ -498,7 +500,12 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
           <section class="website" data-aos="fade-up" data-aos-duration="1000">
             <span><i class="fa-solid fa-laptop-code"></i></span>
             <h1>웹사이트<br />구축안내</h1>
-            <button>보러가기 <i class="fa-solid fa-angle-right"></i></button>
+            <button
+              type="button"
+              onclick="location.href='./pages/web/web.html'"
+            >
+              보러가기 <i class="fa-solid fa-angle-right"></i>
+            </button>
           </section>
           <!-- 뉴스레터 박스 -->
           <section
@@ -822,7 +829,9 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        once: true,
+      });
     </script>
   </body>
 </html>
