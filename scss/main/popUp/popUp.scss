@@ -31,7 +31,44 @@ $light-orange-color: #eb9e5c;
   display: flex;
   flex-direction: column;
 }
+// Loader for sign up ---------------------------
+// open animation loader
+#loader {
+  // position
+  position: fixed;
+  top: 0;
+  left: 0;
+  // size
+  width: 100%;
+  height: 100%;
+  // pointer
+  pointer-events: none;
+  // z-index
+  z-index: 1500;
 
+  & > div {
+    // size
+    width: 100%;
+    height: 12.5%;
+    // transition
+    transition: all 500ms;
+    // transform
+    transform: translateX(100%);
+  }
+
+  @for $i from 1 through 8 {
+    & > div:nth-child(#{$i}) {
+      transition-delay: $i * 100ms;
+    }
+  }
+}
+
+// Translate setting for loader
+body:not(.hidden).reveal #loader > div {
+  transform: translateX(0);
+  // background
+  background-color: $nav-black-color;
+}
 // Sign Up Part-----------------------------------
 .sign__bg {
   // size
@@ -39,8 +76,6 @@ $light-orange-color: #eb9e5c;
   height: 100%;
   // position
   position: fixed;
-  // background
-  background-color: $nav-black-color;
   // z-index
   z-index: 1500;
   // opacity
@@ -48,7 +83,7 @@ $light-orange-color: #eb9e5c;
   // transform
   transform: translateX(2000px);
   // Transition
-  transition: all 500ms ease-in-out;
+  transition: all 500ms 150ms ease-in-out;
   // Close button
   #sign__close {
     // font
