@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+textarea {
+  border: 1px solid #575757;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -782,60 +782,94 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
       </section>
     </main>
     <!-- footer -->
-    <footer>
-      <!-- first box -->
+    <footer id="footer__box">
+      <!-- top -->
       <section>
-        <h1>< webffle /></h1>
-        <!-- First Box Contents -->
-        <p>
-          <span>Company.</span> Miyadesignhouse <br />
-          <span>CEO.</span> 김정미 <br />
-          <span>Biz License.</span> 129-10-85411
-          <a
-            href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1291085411"
-            rel="noopener noreferrer"
-            target="_blank"
-            >[사업자번호조회]</a
-          ><br />
-          <span>Tel.</span> 070-4610-1414 / <span>Fax.</span> 031-629-5436<br />
-          <span>Address.</span> 경기도 성남시 분당구 판교로 700 <br />[
-          분당테크노파크 E동 111호 ]<br />
-          <span>E-mail.</span> webffle2112@gmail.com<br />
-          <a id="privacy"
-            ><i class="fa-solid fa-caret-right"></i> Privacy policy</a
-          >
-        </p>
+        <!-- header Logo -->
+        <header>
+          <h1>< webffle /></h1>
+          <button class="download">
+            회사소개 다운로드 &nbsp;<i class="fa-solid fa-download"></i>
+          </button>
+        </header>
+        <!-- call -->
+        <section id="call">
+          <h2>CALL</h2>
+          <ul>
+            <li>T.070-4610-1414</li>
+            <li>F.031-629-5436</li>
+          </ul>
+        </section>
+        <!-- email -->
+        <section id="email">
+          <h2>E-MAIL</h2>
+          <ul>
+            <li>webffle2112@gmail.com</li>
+          </ul>
+        </section>
+        <!-- privacy -->
+        <section id="privacy">
+          <h2>PRIVACY</h2>
+          <ul>
+            <li>
+              <a id="privacy">[ Privacy policy ]</a>
+            </li>
+          </ul>
+        </section>
+        <!-- other site -->
+        <section id="othersite">
+          <h2>OTEHR SITE</h2>
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-caret-right"></i> 미야디자인하우스</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-caret-right"></i> 어반하루</a>
+            </li>
+          </ul>
+        </section>
       </section>
-      <!-- second box -->
+      <!-- bottom -->
       <section>
-        <h2>Certification</h2>
-        <!-- Certification Logos -->
-        <figure>
-          <!-- KIDP -->
+        <!-- footer info contents -->
+        <section id="footer__info">
+          <ul>
+            <!-- 브랜드명 / 회사명 -->
+            <li>브랜드명: 웹플 / 회사명: 미야디자인하우스</li>
+            <!-- 대표 / 개인정보 책임담당 -->
+            <li>대표: 김정미 / 개인정보 책임담당: 김태한</li>
+            <!-- 주소 -->
+            <li class="address">
+              주소: 경기도 성남시 분당구 판교로 700 분당테크노파크 D동 111호
+            </li>
+            <!-- 사업자 등록번호 -->
+            <li>
+              사업자등록번호:
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1291085411"
+                class="bizLicense"
+                >129-10-85411</a
+              >
+            </li>
+            <!-- copyright -->
+            <li id="copyright">Copyright &copy; webffle 2022</li>
+          </ul>
+        </section>
+        <!-- certification -->
+        <section id="certification">
+          <img src="../../images/certification/kidp.png" alt="kidp" />
           <img
-            src="./images/certification/kidp.png"
-            alt="kidp 인증업체"
-            id="kidp"
-          />
-          <!-- 여성기업 -->
-          <img
-            src="./images/certification/woman_logo.png"
+            src="../../images/certification/woman_logo.png"
             alt="여성기업로고"
-            id="women"
           />
-        </figure>
-        <!-- Other site -->
-        <h3>Other sites</h3>
-        <p>
-          <a href="http://www.mdh.kr/">미야디자인</a>
-          <a href="https://smartstore.naver.com/miyadesign">어반하루</a>
-        </p>
-        <!-- Copyright -->
-        <h6>Copyright &copy; Webffle 2022</h6>
+        </section>
       </section>
     </footer>
     <!-- JS Link -->
     <script src="./js/main/main.js"></script>
+    <script src="./js/default/default.js"></script>
     <script src="./js/sign/sign.js"></script>
     <script src="./js/nav/nav.js"></script>
     <!-- AOS -->

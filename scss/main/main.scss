@@ -27,6 +27,11 @@ $blue-color: #036ffc;
   box-sizing: border-box;
 }
 
+textarea {
+  // border
+  border: 1px solid $dark-grey-color;
+}
+
 // 자주쓰는 flex column 스타일
 @mixin flexboxStyle {
   display: flex;

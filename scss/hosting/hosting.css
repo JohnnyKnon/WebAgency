@@ -44,7 +44,7 @@ main #main__bg__image {
   }
 }
 
-main header {
+main .page__header {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,7 +59,7 @@ main header {
   z-index: 400;
 }
 
-main header article {
+main .page__header article {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -70,18 +70,18 @@ main header article {
 }
 
 @media screen and (max-width: 973px) {
-  main header article {
+  main .page__header article {
     padding-left: 50px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  main header article {
+  main .page__header article {
     padding-left: 30px;
   }
 }
 
-main header article h1 {
+main .page__header article h1 {
   display: inline-block;
   font-weight: 700;
   font-size: 2.4rem;
@@ -91,12 +91,12 @@ main header article h1 {
 }
 
 @media screen and (max-width: 767px) {
-  main header article h1 {
+  main .page__header article h1 {
     font-size: 2rem;
   }
 }
 
-main header article p {
+main .page__header article p {
   display: inline-block;
   font-weight: 400;
   font-size: 1.2rem;
@@ -104,7 +104,7 @@ main header article p {
 }
 
 @media screen and (max-width: 767px) {
-  main header article p {
+  main .page__header article p {
     font-size: 0.9rem;
     padding-left: 20px;
   }

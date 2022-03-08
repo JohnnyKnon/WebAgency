@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../../scss/Default/Default.css" />
     <link rel="stylesheet" href="../../scss/web/web.css" />
     <link rel="stylesheet" href="../../scss/main/popUp/popUp.css" />
+    <!-- Circle Progress Style -->
+    <link
+      rel="stylesheet"
+      href="../../css/circleProgress/css-circular-prog-bar.css"
+    />
     <!-- Sliders Style -->
     <link rel="stylesheet" href="../../scss/hosting/hosting.css" />
     <!-- AOS -->
@@ -429,6 +434,7 @@
         </article>
       </div>
     </div>
+    <div class="cursor"></div>
     <!-- Nav -->
     <!-- Nav Part -->
     <nav id="navbar">
@@ -442,7 +448,7 @@
     <!-- Main -->
     <main>
       <!-- header -->
-      <header>
+      <header class="page__header">
         <article>
           <h1>웹 제작</h1>
           <p>웹을 와플처럼 간단하게 사자!</p>
@@ -571,66 +577,361 @@
           <button class="btn-6 dot" onclick="currentSlide(6)"></button>
         </section>
       </section>
-      <!-- Spec -->
-      <section id="spec"></section>
+      <!-- Process -->
+      <section id="process">
+        <!-- Header tag -->
+        <header>
+          <h1>제작절차</h1>
+        </header>
+        <!-- Article process progress -->
+        <article>
+          <!-- 기획 -->
+          <section id="plan">
+            <div class="progress-circle p10">
+              <span><i class="fa-solid fa-chalkboard-user"></i></span>
+              <div class="left-half-clipper">
+                <div class="first50-bar"></div>
+                <div class="value-bar"></div>
+              </div>
+            </div>
+            <h2>기획</h2>
+          </section>
+          <i class="fas fa-angle-right"></i>
+          <!-- 디자인 -->
+          <section class="design">
+            <div class="progress-circle p33">
+              <span><i class="fa-solid fa-pen-fancy"></i></span>
+              <div class="left-half-clipper">
+                <div class="first50-bar-color"></div>
+                <div id="value__color" class="value-bar"></div>
+              </div>
+            </div>
+            <h2>디자인</h2>
+          </section>
+          <i class="fas fa-angle-right"></i>
+          <!-- 코딩 -->
+          <section id="code">
+            <div class="progress-circle p50">
+              <span><i class="fa-solid fa-code"></i></span>
+              <div class="left-half-clipper">
+                <div class="first50-bar"></div>
+                <div class="value-bar"></div>
+              </div>
+            </div>
+            <h2>개발</h2>
+          </section>
+          <i class="fas fa-angle-right"></i>
+          <!-- 확인 -->
+          <section id="confirm">
+            <div class="progress-circle over50 p75">
+              <span><i class="fa-solid fa-circle-check"></i></span>
+              <div class="left-half-clipper">
+                <div class="first50-bar-color"></div>
+                <div id="value__color" class="value-bar"></div>
+              </div>
+            </div>
+            <h2>최종확인</h2>
+          </section>
+          <i class="fas fa-angle-right"></i>
+          <!-- 오픈 -->
+          <section id="serivce__open">
+            <div class="progress-circle over50 p100">
+              <span><i class="fa-solid fa-globe"></i></span>
+              <div class="left-half-clipper">
+                <div class="first50-bar"></div>
+                <div class="value-bar"></div>
+              </div>
+            </div>
+            <h2>오픈</h2>
+          </section>
+        </article>
+      </section>
+      <!-- portfolio -->
+      <section id="web__portfolio">
+        <header>
+          <h1>포트폴리오</h1>
+          <h4>웹플 에서 제작 완료된 프로젝트입니다.</h4>
+        </header>
+        <section id="portfolio__image"></section>
+        <article>
+          <!-- 1 -->
+          <section
+            class="portfolio__contents__box"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div>
+              <img
+                src="../../images/portfolio/web/webPortfolioImg.png"
+                alt="hsi 사이트"
+              />
+              <h3>H.S.I.</h3>
+              <ul>
+                <li class="type">웹사이트 제작</li>
+                <li class="status">운영중</li>
+              </ul>
+              <a href="http://www.hsinternational.co.kr"
+                ><i class="fas fa-location-arrow"></i> 사이트 방문하기</a
+              >
+            </div>
+          </section>
+          <!-- 2 -->
+          <section
+            class="portfolio__contents__box"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <div>
+              <img
+                src="../../images/portfolio/web/webPortfolioImg_1.png"
+                alt="은진캐미컬 사이트"
+              />
+              <h3>은진캐미컬</h3>
+              <ul>
+                <li class="type">웹사이트 제작</li>
+                <li class="status">운영중</li>
+              </ul>
+              <a href="http://www.eunjinchem.com/"
+                ><i class="fas fa-location-arrow"></i> 사이트 방문하기</a
+              >
+            </div>
+          </section>
+          <!-- 3 -->
+          <section
+            class="portfolio__contents__box"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <div>
+              <img
+                src="../../images/portfolio/skin/skinPortfolioImg.png"
+                alt="미야디자인하우스 웹스킨"
+              />
+              <h3>미야디자인하우스</h3>
+              <ul>
+                <li class="type">쇼핑몰 스킨</li>
+                <li class="status">운영중</li>
+              </ul>
+              <a href="http://www.mdh.kr"
+                ><i class="fas fa-location-arrow"></i> 사이트 방문하기</a
+              >
+            </div>
+          </section>
+        </article>
+      </section>
+      <!-- Quotation -->
+      <section id="quotation">
+        <!-- header -->
+        <header id="quotation__header">
+          <h1>견적문의</h1>
+          <article>
+            <h2>
+              <span class="header__span">E-mail.</span> webffle2112@gmail.com
+            </h2>
+            <h2><span class="header__span">Tel.</span> 070-4610-1414</h2>
+          </article>
+        </header>
+        <!-- privacy / submit -->
+        <section id="quotation__privacy">
+          <div class="quotation__privacy">
+            <h3>개인정보 수집 및 이용안내</h3>
+            <textarea
+              name="agreeText__quotation"
+              id="agree__sign"
+              rows="4"
+              readonly
+            >
+  1. 수집하는 개인정보 항목
+  본 사이트는 온라인 상담을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+  개인정보 수집항목: 회사명, 담당자명, 연락처(일반/휴대 전화번호), 이메일
+  개인정보 수집방법: 웹사이트 상담 신청
+  
+  2. 개인정보의 수집 및 이용목적
+  회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+  웹사이트 제작 상담 및 견적
+  
+  3. 개인정보의 보유 및 이용기간
+  원칙상, 개인정보 수집 및 이용목적을 달성된 후에는 해당 정보를 지체 없이 파기합니다.
+          </textarea
+            >
+          </div>
+          <div class="agree__checkbox">
+            <input
+              type="checkbox"
+              name="quotation__agree"
+              id="agree__check__quotation"
+            />
+            <label for="agree__check__quotation"
+              >개인정보 수집 및 이용에 동의합니다.</label
+            >
+          </div>
+        </section>
+        <!-- input contents -->
+        <section id="input__contents">
+          <!-- Left part -->
+          <section id="input__left">
+            <div>
+              <label for="name__text"
+                ><span class="label__span">*</span>회사명</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name__text"
+                placeholder="회사명을 입력해주세요."
+                maxlength="15"
+              />
+            </div>
+            <div>
+              <label for="responsibility"
+                ><span class="label__span">*</span>담당자 / 직책</label
+              >
+              <input
+                type="text"
+                name="responsibility"
+                id="responsibility"
+                placeholder="담당자 / 직책 입력해주세요."
+                maxlength="30"
+              />
+            </div>
+          </section>
+          <!-- right part -->
+          <section id="input__right">
+            <div>
+              <label for="phone__text"
+                ><span class="label__span">*</span>연락처</label
+              >
+              <input
+                type="tel"
+                name="phone"
+                id="phone__text"
+                placeholder="Ex). 010-0000-0000"
+              />
+            </div>
+            <div>
+              <label for="email__text"
+                ><span class="label__span">*</span>이메일주소</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email__text"
+                placeholder="example@webffle.com"
+              />
+            </div>
+          </section>
+        </section>
+        <section id="input__bottom">
+          <h3 class="contents__title">문의내용</h3>
+          <textarea
+            name="content"
+            id="content__text"
+            placeholder="내용을 입력해주세요."
+            rows="15"
+          ></textarea>
+        </section>
+        <footer id="submit">
+          <input
+            type="submit"
+            id="quotation__submit"
+            value="사이트견적문의하기"
+          />
+          <a href="#"
+            >유지보수 신청하기 <i class="fa-solid fa-arrow-right-long"></i
+          ></a>
+        </footer>
+      </section>
     </main>
     <!-- footer -->
-    <footer>
-      <!-- first box -->
+    <footer id="footer__box">
+      <!-- top -->
       <section>
-        <h1>< webffle /></h1>
-        <!-- First Box Contents -->
-        <p>
-          <span>Company.</span> Miyadesignhouse <br />
-          <span>CEO.</span> 김정미 <br />
-          <span>Biz License.</span> 129-10-85411
-          <a
-            href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1291085411"
-            rel="noopener noreferrer"
-            target="_blank"
-            >[사업자번호조회]</a
-          ><br />
-          <span>Tel.</span> 070-4610-1414 / <span>Fax.</span> 031-629-5436<br />
-          <span>Address.</span> 경기도 성남시 분당구 판교로 700 <br />[
-          분당테크노파크 E동 111호 ]<br />
-          <span>E-mail.</span> webffle2112@gmail.com<br />
-          <a id="privacy"
-            ><i class="fa-solid fa-caret-right"></i> Privacy policy</a
-          >
-        </p>
+        <!-- header Logo -->
+        <header>
+          <h1>< webffle /></h1>
+          <button class="download">
+            회사소개 다운로드 &nbsp;<i class="fa-solid fa-download"></i>
+          </button>
+        </header>
+        <!-- call -->
+        <section id="call">
+          <h2>CALL</h2>
+          <ul>
+            <li>T.070-4610-1414</li>
+            <li>F.031-629-5436</li>
+          </ul>
+        </section>
+        <!-- email -->
+        <section id="email">
+          <h2>E-MAIL</h2>
+          <ul>
+            <li>webffle2112@gmail.com</li>
+          </ul>
+        </section>
+        <!-- privacy -->
+        <section id="privacy">
+          <h2>PRIVACY</h2>
+          <ul>
+            <li>
+              <a id="privacy">[ Privacy policy ]</a>
+            </li>
+          </ul>
+        </section>
+        <!-- other site -->
+        <section id="othersite">
+          <h2>OTEHR SITE</h2>
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-caret-right"></i> 미야디자인하우스</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-caret-right"></i> 어반하루</a>
+            </li>
+          </ul>
+        </section>
       </section>
-      <!-- second box -->
+      <!-- bottom -->
       <section>
-        <h2>Certification</h2>
-        <!-- Certification Logos -->
-        <figure>
-          <!-- KIDP -->
-          <img
-            src="../../images/certification/kidp.png"
-            alt="kidp 인증업체"
-            id="kidp"
-          />
-          <!-- 여성기업 -->
+        <!-- footer info contents -->
+        <section id="footer__info">
+          <ul>
+            <!-- 브랜드명 / 회사명 -->
+            <li>브랜드명: 웹플 / 회사명: 미야디자인하우스</li>
+            <!-- 대표 / 개인정보 책임담당 -->
+            <li>대표: 김정미 / 개인정보 책임담당: 김태한</li>
+            <!-- 주소 -->
+            <li class="address">
+              주소: 경기도 성남시 분당구 판교로 700 분당테크노파크 D동 111호
+            </li>
+            <!-- 사업자 등록번호 -->
+            <li>
+              사업자등록번호:
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1291085411"
+                class="bizLicense"
+                >129-10-85411</a
+              >
+            </li>
+            <!-- copyright -->
+            <li id="copyright">Copyright &copy; webffle 2022</li>
+          </ul>
+        </section>
+        <!-- certification -->
+        <section id="certification">
+          <img src="../../images/certification/kidp.png" alt="kidp" />
           <img
             src="../../images/certification/woman_logo.png"
             alt="여성기업로고"
-            id="women"
           />
-        </figure>
-        <!-- Other site -->
-        <h3>Other sites</h3>
-        <p>
-          <a href="http://www.mdh.kr/">미야디자인</a>
-          <a href="https://smartstore.naver.com/miyadesign">어반하루</a>
-        </p>
-        <!-- Copyright -->
-        <h6>Copyright &copy; Webffle 2022</h6>
+        </section>
       </section>
     </footer>
     <!-- script -->
     <script src="../../js/sign/sign.js"></script>
     <script src="../../js/nav/nav.js"></script>
-    <script src="../../js/main/main.js"></script>
+    <script src="../../js/default/default.js"></script>
     <script src="../../js/subpage/hosting/hosting_slider.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
