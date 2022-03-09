@@ -424,7 +424,6 @@ aside ul #screen__pc__li:hover::after, aside ul #screen__pc__li:focus::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 30px;
   }
 }
 
@@ -457,6 +456,12 @@ aside ul #screen__pc__li:hover::after, aside ul #screen__pc__li:focus::after {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  #footer__box > section:nth-of-type(2) #certification {
+    margin-bottom: 30px;
+  }
 }
 
 #footer__box > section:nth-of-type(2) #certification img:nth-of-type(1) {

@@ -527,23 +527,34 @@ main #add article {
 
 @media screen and (max-width: 767px) {
   main #add article section {
-    left: 7px;
+    left: 0px;
   }
 }
 
 main #add article section #trafic {
   position: relative;
-  top: -29px;
+  top: -22px;
 }
 
 @media screen and (max-width: 973px) {
   main #add article section #trafic {
     top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
-main #add article section li {
+main #add article section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+main #add article section ul li {
   display: inline-block;
   width: 500px;
   font-family: "Noto Sans KR", sans-serif;
@@ -554,9 +565,9 @@ main #add article section li {
 }
 
 @media screen and (max-width: 767px) {
-  main #add article section li {
-    width: 330px;
-    font-size: 0.8rem;
+  main #add article section ul li {
+    width: 280px;
+    font-size: 0.75rem;
   }
 }
 

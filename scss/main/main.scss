@@ -103,12 +103,15 @@ main {
       z-index: 1;
       // video tag 임시로 이미지
       .home__img {
+        // position
+        position: absolute;
         // size
         width: 100vw;
         height: 100vh;
         // background
         background: url(../../images/main/bg/webffleMain.jpg) no-repeat
           center/cover;
+
         background-attachment: fixed;
       }
     }
@@ -283,7 +286,7 @@ main {
         // Responsive
         @include ResponsiveMobile() {
           // font
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
       }
     }
@@ -350,10 +353,15 @@ main {
     align-items: center;
     justify-content: center;
     gap: 120px;
+    // Responsive
     @include ResponsiveMobile() {
       overflow-y: hidden;
       //   flex
       gap: 15px;
+      // margin
+      margin-top: 30px;
+      // padding
+      padding-bottom: 30px;
     }
     .bg__img {
       // position
@@ -366,6 +374,11 @@ main {
       height: 100%;
       //   filter
       filter: brightness(40%);
+      // Responsive
+      @include ResponsiveMobile() {
+        // size
+        height: 110%;
+      }
     }
     // title
     .service__title__wrapper {
@@ -445,6 +458,7 @@ main {
           // font
           font-family: $kr-font-family;
           font-size: 1rem;
+          color: $black-color;
           @include ResponsiveMobile() {
             font-size: 0.7rem;
           }
@@ -565,165 +579,6 @@ main {
           font-family: $eng-font-family;
           font-weight: $bold-weight;
           color: $orange-color;
-        }
-      }
-    }
-  }
-  // Contact
-  #contact {
-    // size
-    width: 100vw;
-    height: 100vh;
-    // overflow
-    overflow-x: hidden;
-    // position
-    position: relative;
-    // flex
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 45px;
-    // Responsive
-    @include ResponsiveMobile() {
-      // size
-      height: 1100px;
-      // flex
-      flex-direction: column;
-      gap: 0px;
-    }
-    // article
-    article {
-      // font
-      font-family: $kr-font-family;
-    }
-    // first box
-    .contact__first__box {
-      @include flexboxStyle();
-      align-items: flex-start;
-      gap: 30px;
-      // Reponsive
-      @include ResponsiveMobile() {
-        // position
-        position: relative;
-        top: 40px;
-      }
-      // Title
-      h1 {
-        // font
-        font-weight: $black-weight;
-        font-size: 3rem;
-        // text
-        text-align: left;
-      }
-      section:nth-of-type(1),
-      section:nth-of-type(2) {
-        // flex
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        div {
-          h3 {
-            // font
-            font-family: $kr-font-family;
-            font-weight: $regular-weight;
-            // padding
-            padding-bottom: 5px;
-          }
-          input {
-            // size
-            width: 160px;
-            height: 30px;
-            // border
-            border: none;
-            border-bottom: 1px solid $black-color;
-            // padding
-            padding: 0 5px;
-          }
-        }
-      }
-      section:nth-of-type(3) {
-        h3 {
-          // font
-          font-family: $kr-font-family;
-          font-weight: $regular-weight;
-          // padding
-          padding-bottom: 10px;
-        }
-        textarea {
-          // size
-          width: 330px;
-          height: 140px;
-          // padding
-          padding: 10px;
-        }
-      }
-    }
-    // last box
-    .contact__last__box {
-      // flex
-      @include flexboxStyle();
-      align-items: center;
-      gap: 20px;
-      // title of textarea
-      h2 {
-        // text
-        text-align: center;
-      }
-      // textarea
-      textarea {
-        // size
-        width: 300px;
-        height: 270px;
-        // border
-        border: 1px solid $dark-grey-color;
-        // block Resizing
-        resize: none;
-        // padding
-        padding: 10px 10px;
-        // font
-        font-family: $kr-font-family;
-        font-size: 0.8rem;
-        color: $dark-grey-color;
-        // text
-        text-align: justify;
-        // Responsive
-        @include ResponsiveMobile() {
-          width: 330px;
-        }
-      }
-      .agree__checkbox {
-        // cursor
-        cursor: pointer;
-        label {
-          // font
-          font-weight: $medium-weight;
-          font-size: 0.9rem;
-          // cursor
-          cursor: pointer;
-        }
-      }
-      input[type='submit'] {
-        // font
-        font-weight: $bold-weight;
-        font-size: 1rem;
-        color: $white-color;
-        // border
-        // background
-        background-color: $black-color;
-        // size
-        width: 300px;
-        height: 35px;
-        // transition
-        transition: all 500ms ease-out;
-        // cursor
-        cursor: pointer;
-        &:hover,
-        &:focus {
-          // font
-          color: $black-color;
-          // background
-          background-color: $white-color;
         }
       }
     }

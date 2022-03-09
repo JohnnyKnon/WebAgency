@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+// Variable
+// Font Family
+$kr-font-family: 'Noto Sans KR', sans-serif;
+$eng-font-family: 'Roboto', sans-serif;
+$style-font-family: 'Comforter', cursive;
+// Font Weight
+$light-weight: 300;
+$regular-weight: 400;
+$medium-weight: 500;
+$bold-weight: 700;
+$black-weight: 900;
+// color
+$white-color: #fff;
+$black-color: #000;
+$nav-black-color: rgba(0, 0, 0, 0.822);
+$grey-color: #cfcfcf;
+$dark-grey-color: #575757;
+$button-color: rgba(0, 0, 0, 0.733);
+$orange-color: #fc7703;
+$light-orange-color: #eb9e5c;
+$blue-color: #036ffc;
+
+// 자주쓰는 flex column 스타일
+@mixin flexboxStyle {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin ResponsiveMobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin ResponsiveSmallTablet {
+  @media screen and (max-width: 820px) {
+    @content;
+  }
+}
+
+@mixin ResponsiveTablet {
+  @media screen and (max-width: 912px) {
+    @content;
+  }
+}
+
+// Input Reset
+@mixin inputReset {
+  appearance: none;
+  border-radius: 0;
+}

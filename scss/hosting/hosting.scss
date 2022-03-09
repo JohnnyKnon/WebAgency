@@ -566,38 +566,43 @@ main {
         }
         @include ResponsiveMobile() {
           // position
-          left: 7px;
+          left: 0px;
         }
         #trafic {
           // position
           position: relative;
-          top: -29px;
+          top: -22px;
           // Reponsive
           @include ResponsiveTablet() {
             top: 0;
             // margin
-            margin-bottom: 20px;
+            margin-bottom: 10px;
           }
         }
-        // info
-        li {
-          // display
-          display: inline-block;
-          // size
-          width: 500px;
-          // font
-          font-family: $kr-font-family;
-          font-weight: $regular-weight;
-          font-size: 0.9rem;
-          color: $dark-grey-color;
-          // text
-          line-height: 20px;
-          //   Reponsive
-          @include ResponsiveMobile() {
+        ul {
+          // flex
+          @include flexboxStyle();
+          gap: 10px;
+          // info
+          li {
+            // display
+            display: inline-block;
             // size
-            width: 330px;
+            width: 500px;
             // font
-            font-size: 0.8rem;
+            font-family: $kr-font-family;
+            font-weight: $regular-weight;
+            font-size: 0.9rem;
+            color: $dark-grey-color;
+            // text
+            line-height: 20px;
+            //   Reponsive
+            @include ResponsiveMobile() {
+              // size
+              width: 280px;
+              // font
+              font-size: 0.75rem;
+            }
           }
         }
       }

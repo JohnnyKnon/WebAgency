@@ -482,7 +482,6 @@ aside {
       // flex
       flex-direction: column-reverse;
       align-items: center;
-      gap: 30px;
     }
     // footer info
     #footer__info {
@@ -519,6 +518,10 @@ aside {
       display: flex;
       align-items: center;
       gap: 20px;
+      // Responsive
+      @include ResponsiveMobile() {
+        margin-bottom: 30px;
+      }
       // kidp
       img:nth-of-type(1) {
         // size
