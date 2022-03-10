@@ -75,7 +75,7 @@ $blue-color: #036ffc;
     h1 {
       // font
       font-weight: $bold-weight;
-      font-size: 4.5rem; //모바일 3rem
+      font-size: 3.5rem; //모바일 3rem
       // padding
       padding-bottom: 50px;
     }
@@ -293,10 +293,22 @@ $blue-color: #036ffc;
     // size
     width: 200px;
     padding: 10px 0;
+    // cursor
+    cursor: pointer;
     // border
-    border: 1px solid $black-color;
+    border: 2px solid $black-color;
     // background
     background-color: $black-color;
+    // transition
+    transition: all 280ms ease-in-out;
+    // hover
+    &:hover,
+    &:focus {
+      // background
+      background-color: $white-color;
+      // font
+      color: $black-color;
+    }
     // Responsive
     @include ResponsiveSmallTablet() {
       // size

@@ -21,6 +21,16 @@ main .web__bg {
   background-attachment: fixed;
 }
 
+@media screen and (max-width: 767px) {
+  main .web__bg {
+    background-attachment: local;
+  }
+}
+
+main #apply {
+  z-index: 100;
+}
+
 main #apply #slides__style {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +101,7 @@ main #process {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1000;
+  z-index: 500;
 }
 
 main #process header h1 {
@@ -173,6 +183,7 @@ main #web__portfolio {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 400;
 }
 
 main #web__portfolio header {
@@ -306,7 +317,11 @@ main #web__portfolio article .portfolio__contents__box div a:hover, main #web__p
   border-color: #fc7703;
 }
 
+main #contact {
+  z-index: 400;
+}
+
 main #contact header #quotation__title {
-  font-size: 2.8rem;
+  font-size: 2.3rem;
 }
 /*# sourceMappingURL=web.css.map */

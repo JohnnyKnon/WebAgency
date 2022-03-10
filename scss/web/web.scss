@@ -63,9 +63,16 @@ main {
     background: url(../../images/subpage/web/bg/webBG.png) no-repeat
       center/cover;
     background-attachment: fixed;
+    // Responsive
+    @include ResponsiveMobile() {
+      // background
+      background-attachment: local;
+    }
   }
   // apply
   #apply {
+    // z-index
+    z-index: 100;
     // slides style
     #slides__style {
       // flex
@@ -138,7 +145,7 @@ main {
     justify-content: center;
     align-items: center;
     // z-index
-    z-index: 1000;
+    z-index: 500;
     // header
     header {
       // h1 title
@@ -204,6 +211,8 @@ main {
     @include flexboxStyle();
     justify-content: center;
     align-items: center;
+    // z-index
+    z-index: 400;
     // header
     header {
       // flex
@@ -345,11 +354,13 @@ main {
   }
   // quotation
   #contact {
+    // z-index
+    z-index: 400;
     // header
     header {
       // quotaition title
       #quotation__title {
-        font-size: 2.8rem;
+        font-size: 2.3rem;
       }
     }
   }

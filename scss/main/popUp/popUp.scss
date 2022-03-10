@@ -127,7 +127,7 @@ body:not(.hidden).reveal #loader > div {
       // background
       background-color: $white-color;
       // Transition
-      transition: all 450ms ease-in-out;
+      transition: all 280ms ease-in-out;
       // flex
       @include flexboxStyle();
       justify-content: center;
@@ -281,7 +281,7 @@ body:not(.hidden).reveal #loader > div {
       align-items: center;
       gap: 30px;
       // Transition
-      transition: all 300ms ease-in-out;
+      transition: all 280ms ease-in-out;
       // h1
       h1 {
         // font
