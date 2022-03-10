@@ -23,6 +23,13 @@ body::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.822);
 }
 
+input:not(#agree__check__contact, #agree__check__sign) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+
 button {
   background-color: transparent;
   cursor: pointer;
