@@ -106,12 +106,12 @@ main {
         // position
         position: absolute;
         // size
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         // background
-        background: url(../../images/main/bg/webffleMain.jpg) no-repeat
-          center/cover;
-
+        background: url(../../images/main/bg/webffleMain.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
         background-attachment: fixed;
       }
     }
@@ -285,6 +285,8 @@ main {
 
         // Responsive
         @include ResponsiveMobile() {
+          // width
+          width: 100%;
           // font
           font-size: 2.5rem;
         }
