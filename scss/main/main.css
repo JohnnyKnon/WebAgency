@@ -51,21 +51,19 @@ main #home {
 
 main #home .home__bg__wrapper {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/main/bg/webffleMain.jpg) no-repeat center/cover;
+  background-attachment: fixed;
   -webkit-filter: brightness(40%);
           filter: brightness(40%);
   z-index: 1;
 }
 
-main #home .home__bg__wrapper .home__img {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: url(../../images/main/bg/webffleMain.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+@media screen and (max-width: 767px) {
+  main #home .home__bg__wrapper {
+    background-attachment: local;
+  }
 }
 
 main #home article {
@@ -371,7 +369,6 @@ main #about .right__box p {
 }
 
 main #service {
-  position: relative;
   background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
