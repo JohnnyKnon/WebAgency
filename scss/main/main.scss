@@ -14,12 +14,13 @@ $black-weight: 900;
 $white-color: #fff;
 $black-color: #000;
 $nav-black-color: rgba(0, 0, 0, 0.822);
+$light-grey-color: #e0e0e0;
 $grey-color: #cfcfcf;
 $dark-grey-color: #575757;
 $button-color: rgba(0, 0, 0, 0.733);
 $orange-color: #fc7703;
 $light-orange-color: #eb9e5c;
-$blue-color: #036ffc;
+$skyblue: #0818eb;
 
 * {
   margin: 0;
@@ -368,7 +369,7 @@ main {
       width: 100%;
       height: 100%;
       //   filter
-      filter: brightness(40%);
+      filter: brightness(40%) blur(20px);
       // Responsive
       @include ResponsiveMobile() {
         // size
@@ -415,13 +416,14 @@ main {
       .website,
       .newsletter,
       .hosting {
+        // position
+        position: relative;
         //   box styling
         @include ServiceBoxes(290px, 330px, $white-color, 12px);
         // flex
         @include flexboxStyle();
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        gap: 10px;
         // font
         font-family: $kr-font-family;
         // text
@@ -432,14 +434,40 @@ main {
         }
         span {
           // font
-          font-size: 4rem;
-          color: $dark-grey-color;
+          font-size: 4.5rem;
+          color: $black-color;
+          // position
+          position: relative;
+          top: -30px;
+          // Responsive
           @include ResponsiveMobile() {
             // font
             font-size: 1.8rem;
+            // position
+            top: -4px;
           }
         }
-
+        div {
+          // size
+          width: 100%;
+          height: 50%;
+          // background
+          background-color: $light-grey-color;
+          // border
+          border-radius: 0 0 12px 12px;
+          // flex
+          @include flexboxStyle();
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          // Responsive
+          @include ResponsiveMobile() {
+            // flex
+            gap: 5px;
+            // size
+            height: 65%;
+          }
+        }
         h1 {
           // font
           font-weight: $bold-weight;
@@ -453,13 +481,16 @@ main {
         button {
           // font
           font-family: $kr-font-family;
-          font-size: 1rem;
-          color: $black-color;
+          font-size: 0.9rem;
+          color: $white-color;
+          // text
+          text-align: center;
           // border
-          border: 1px solid $dark-grey-color;
           border-radius: 20px;
+          // background
+          background-color: rgb(105, 0, 0);
           // padding
-          padding: 1px 10px;
+          padding: 4px 15px;
           @include ResponsiveMobile() {
             font-size: 0.7rem;
           }
@@ -479,7 +510,7 @@ main {
       .hosting {
         //   Responsive
         @include ResponsiveSmallTablet() {
-          @include ServiceBoxes(590px, 240px, $white-color, 12px);
+          @include ServiceBoxes(590px, 330px, $white-color, 12px);
         }
         @include ResponsiveMobile() {
           @include ServiceBoxes(250px, 170px, $white-color, 12px);
@@ -496,10 +527,9 @@ main {
     justify-content: center;
     gap: 25px;
     // background
-    background-color: $light-orange-color;
+    background-color: $light-grey-color;
     //font
     font-family: $kr-font-family;
-    color: $white-color;
     h1 {
       // font
       font-weight: $black-weight;
@@ -539,10 +569,10 @@ main {
         // email
         #email__template {
           // border
-          border: 2px solid $white-color;
+          border: 2px solid $black-color;
           border-radius: 20px;
           // background
-          background-color: $black-color;
+          background-color: $white-color;
           // font
           font-family: $eng-font-family;
           font-family: $light-weight;
@@ -559,7 +589,7 @@ main {
           // font
           font-family: $eng-font-family;
           font-weight: $bold-weight;
-          color: $orange-color;
+          color: $black-color;
         }
       }
     }
