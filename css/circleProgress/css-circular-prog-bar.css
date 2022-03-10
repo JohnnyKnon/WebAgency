@@ -26,8 +26,8 @@
 /* Text inside the control */
 .progress-circle span {
     position: absolute;
-    line-height: 4.5em;
-    width: 4.4em;
+    line-height: 4.4em;
+    width: 4.45em;
     text-align: center;
     display: block;
     color: #6b6b6b;
