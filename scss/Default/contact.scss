@@ -50,3 +50,262 @@ $blue-color: #036ffc;
   appearance: none;
   border-radius: 0;
 }
+
+input:not(#agree__check__contact) {
+  appearance: none;
+  border-radius: 0;
+}
+
+// Contact
+#contact {
+  // position
+  position: relative;
+  // max width
+  max-width: 1200px;
+  // size
+  width: 100%;
+  height: 100%;
+  // font
+  font-family: $kr-font-family;
+  // padding
+  padding: 80px 0;
+  // flex
+  @include flexboxStyle();
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  // header
+  header {
+    // size
+    width: 100%;
+    // h1 Title
+    h1 {
+      // font
+      font-weight: $bold-weight;
+      font-size: 4.5rem; //모바일 3rem
+      // position
+      position: relative;
+      right: 40px;
+      // padding
+      padding-bottom: 50px;
+      // float
+      float: right;
+    }
+  }
+  // Contact Privacy box
+  #contact__privacy__box {
+    // flex
+    @include flexboxStyle();
+    align-items: center;
+    // size
+    width: 70%;
+    // label privacy title
+    label[for='agree__contact'] {
+      // font
+      font-weight: $bold-weight;
+      font-size: 1.3rem;
+      // padding
+      padding-bottom: 10px;
+    }
+    // Contact Privacy textarea
+    #agree__contact {
+      // font
+      font-weight: $regular-weight;
+      // text
+      text-align: justify;
+      // border
+      border: 1px solid $dark-grey-color;
+      // size
+      width: 100%;
+      height: 200px;
+      resize: none;
+      // padding
+      padding: 20px;
+    }
+    // Agree Checkbox wrapper
+    .agree__checkbox {
+      // padding
+      padding: 10px 0;
+      // flex
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      // label checkbox title
+      label[for='agree__check__contact'] {
+        // font
+        font-size: 0.8rem;
+        // cursor
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Input box contact contents part
+  #input__box {
+    // size
+    width: 70%;
+
+    // Contact contents
+    li:not(.contact__text) {
+      // flex
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      // margin
+      margin-bottom: 35px;
+      // Reponsive
+      @include ResponsiveTablet() {
+        // flex
+        gap: 15px;
+      }
+      @include ResponsiveSmallTablet() {
+        // flex
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
+    // Total li style
+    li {
+      // Label / p styling
+      label,
+      p {
+        // font
+        font-size: 1rem;
+        // span styling
+        span {
+          // display
+          display: inline-block;
+          // font
+          font-size: 0.8rem;
+          color: $white-color;
+          // text
+          text-align: center;
+          // margin
+          margin-right: 10px;
+          // padding
+          padding: 5px 20px;
+
+          // background
+          background-color: $black-color;
+        }
+
+        // Select span style 선택
+        .contact__select {
+          // font
+          color: $black-color;
+          // border
+          border: 1px solid $black-color;
+          // background
+          background-color: $white-color;
+        }
+      }
+      //Contact type part
+      .radio__box {
+        // flex
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        // Responsive
+        @include ResponsiveTablet() {
+          // flex
+          gap: 15px;
+        }
+        // Responsive
+        @include ResponsiveMobile() {
+          // size
+          width: 100%;
+        }
+        // radios__box
+        input[type='radio'] {
+          // position
+          position: absolute;
+        }
+        // Label / radio style
+        input[type='radio'] + label {
+          // display
+          display: inline-block;
+          // font
+          color: $white-color;
+          // text
+          text-align: center;
+          // size
+          width: 180px;
+          // padding
+          padding: 10px 0;
+          // border
+          border: 1px solid $grey-color;
+          // background
+          background-color: $grey-color;
+          // cursor
+          cursor: pointer;
+          // Responsive
+          @include ResponsiveSmallTablet() {
+            // size
+            width: 168px;
+          }
+          @include ResponsiveMobile() {
+            // szie
+            width: 100%;
+          }
+        }
+        // Radio checked Label style
+        input[type='radio']:checked + label {
+          // background
+          background-color: $black-color;
+        }
+      }
+
+      // Other Inputs Style
+      input:not(.radio) {
+        // size
+        width: 75%;
+        height: 50px;
+        // font
+        font-size: 1rem;
+        // border
+        border: 0;
+        border-bottom: 1px solid $dark-grey-color;
+        // padding
+        padding: 0 5px;
+        // Responsive
+        @include ResponsiveSmallTablet() {
+          // size
+          width: 100%;
+        }
+      }
+    }
+    // Contact contents(Textarea)
+    .contact__text {
+      // flex
+      @include flexboxStyle();
+      gap: 20px;
+      // contents textarea
+      #contents__contact {
+        // size
+        width: 100%;
+        height: 200px;
+        // border
+        border: 1px solid $dark-grey-color;
+        // padding
+        padding: 10px;
+      }
+    }
+  }
+  // Contact submit
+  #contact__send {
+    // font
+    font-size: 1.1rem;
+    color: $white-color;
+    // size
+    width: 200px;
+    padding: 10px 0;
+    // border
+    border: 1px solid $black-color;
+    // background
+    background-color: $black-color;
+  }
+}

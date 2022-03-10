@@ -30,19 +30,19 @@
     </div>
     <!-- sign contents -->
     <div class="sign__bg">
-      <!-- Close Btn -->
-      <button id="sign__close"><i class="fa-solid fa-xmark"></i></button>
       <!-- Sign box -->
       <section class="sign__box">
         <!-- Sign Up -->
         <section class="signUp">
           <h1>Sign Up</h1>
+          <!-- Close Btn -->
+          <button class="sign__close"><i class="fa-solid fa-xmark"></i></button>
           <section>
             <h2>개인정보 약관동의</h2>
             <textarea name="agreeText" id="agree__sign" rows="10" readonly>
-                [개인정보 약관동의]
+                  [개인정보 약관동의]
 
-          웹플(미야디자인하우스)(이하 ‘회사’라 한다)는 개인정보 보호법 제30조에 따라 정보 주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립, 공개합니다.
+            웹플(미야디자인하우스)(이하 ‘회사’라 한다)는 개인정보 보호법 제30조에 따라 정보 주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립, 공개합니다.
 
 제1조 (개인정보의 처리목적)
 회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
@@ -184,11 +184,16 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
 
 제13조(개인정보 처리방침 시행 및 변경)
 이 개인정보 처리방침은 2022. 1. 10부터 적용됩니다.
-        </textarea
+          </textarea
             >
             <!-- Agree check -->
             <div class="agree__checkbox">
-              <input type="checkbox" name="agree" id="agree__check__sign" />
+              <input
+                type="checkbox"
+                name="agreeSign"
+                id="agree__check__sign"
+                required
+              />
               <label for="agree__check__sign">약관에 동의 하시겠습니까?</label>
             </div>
           </section>
@@ -239,6 +244,9 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
         </section>
         <section class="signIn">
           <h1>Sign In</h1>
+          <button class="sign__close__sign__in">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <section>
             <div>
               <h3 class="email__title">E-mail</h3>

@@ -3,7 +3,8 @@
 const SIGN_BG = document.querySelector('.sign__bg');
 // BTN
 const SIGN_OPEN = document.querySelector('#sign__open');
-const SIGN_CLOSE = document.querySelector('#sign__close');
+const SIGN_CLOSE = document.querySelector('.sign__close');
+const SIGN__IN__CLOSE = document.querySelector('.sign__close__sign__in');
 // SIGN CONTENTS
 const SIGN_UP = document.querySelector('.signUp');
 const SIGN_IN = document.querySelector('.signIn');
@@ -17,6 +18,14 @@ SIGN_OPEN.addEventListener('click', () => {
 
 // SIGN CLOSE
 SIGN_CLOSE.addEventListener('click', () => {
+  SIGN_BG.classList.remove('sign__bg-active');
+  SIGN_UP.classList.remove('signUp-stop');
+  SIGN_IN.classList.remove('signIn-active');
+  //   loader
+  document.body.classList.remove('reveal');
+});
+// SIGN CLOSE SIGN IN
+SIGN__IN__CLOSE.addEventListener('click', () => {
   SIGN_BG.classList.remove('sign__bg-active');
   SIGN_UP.classList.remove('signUp-stop');
   SIGN_IN.classList.remove('signIn-active');
