@@ -447,6 +447,7 @@ main {
             top: -4px;
           }
         }
+        // Grey Colors box
         div {
           // size
           width: 100%;
@@ -490,9 +491,12 @@ main {
           // background
           background-color: rgb(105, 0, 0);
           // padding
-          padding: 4px 15px;
+          padding: 6px 15px;
           @include ResponsiveMobile() {
+            // font
             font-size: 0.7rem;
+            // padding
+            padding: 6px 15px;
           }
         }
       }
@@ -572,11 +576,11 @@ main {
           border: 2px solid $black-color;
           border-radius: 20px;
           // background
-          background-color: $white-color;
+          background-color: transparent;
           // font
           font-family: $eng-font-family;
           font-family: $light-weight;
-          color: $white-color;
+          color: $black-color;
           // margin
           padding: 0 10px;
         }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../scss/Default/Default.css" />
     <link rel="stylesheet" href="../../scss/web/web.css" />
     <link rel="stylesheet" href="../../scss/main/popUp/popUp.css" />
+    <link rel="stylesheet" href="../../scss/Default/adminBtn/adminBtn.css" />
     <link rel="stylesheet" href="../../scss/Default/contact.css" />
     <!-- Circle Progress Style -->
     <link
@@ -444,7 +445,17 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
         </article>
       </div>
     </div>
-    <div class="cursor"></div>
+    <!-- admin control-->
+    <div class="admin">
+      <button class="admin__toggle__btn">
+        <i class="fa-solid fa-chevron-left open"></i>
+        <i class="fa-solid fa-chevron-right close"></i>
+      </button>
+      <section class="admin__contents">
+        <a href="#">시안확인</a>
+        <a href="#">관리자콘솔 <i class="fa-solid fa-caret-right"></i></a>
+      </section>
+    </div>
     <!-- Nav -->
     <!-- Nav Part -->
     <nav id="navbar">
@@ -1083,6 +1094,7 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
     <script src="../../js/nav/nav.js"></script>
     <script src="../../js/default/default.js"></script>
     <script src="../../js/subpage/hosting/hosting_slider.js"></script>
+    <script src="../../js/default/adminNav/adminBtn.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
