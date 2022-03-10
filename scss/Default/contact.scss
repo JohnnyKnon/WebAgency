@@ -230,6 +230,8 @@ $blue-color: #036ffc;
           background-color: $grey-color;
           // cursor
           cursor: pointer;
+          // transition
+          transition: all 250ms ease-in-out;
           // Responsive
           @include ResponsiveSmallTablet() {
             // size
