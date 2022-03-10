@@ -492,7 +492,7 @@ main #service .service__contents__wrapper .hosting {
 main #service .service__contents__wrapper .website span,
 main #service .service__contents__wrapper .newsletter span,
 main #service .service__contents__wrapper .hosting span {
-  font-size: 2.8rem;
+  font-size: 4rem;
   color: #575757;
 }
 
@@ -526,6 +526,9 @@ main #service .service__contents__wrapper .hosting button {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1rem;
   color: #000;
+  border: 1px solid #575757;
+  border-radius: 20px;
+  padding: 1px 10px;
 }
 
 @media screen and (max-width: 767px) {
@@ -534,27 +537,6 @@ main #service .service__contents__wrapper .hosting button {
   main #service .service__contents__wrapper .hosting button {
     font-size: 0.7rem;
   }
-}
-
-main #service .service__contents__wrapper .website button::after,
-main #service .service__contents__wrapper .newsletter button::after,
-main #service .service__contents__wrapper .hosting button::after {
-  display: block;
-  content: '';
-  border-bottom: 1px solid #000;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-main #service .service__contents__wrapper .website button:hover::after, main #service .service__contents__wrapper .website button:focus::after,
-main #service .service__contents__wrapper .newsletter button:hover::after,
-main #service .service__contents__wrapper .newsletter button:focus::after,
-main #service .service__contents__wrapper .hosting button:hover::after,
-main #service .service__contents__wrapper .hosting button:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
 }
 
 @media screen and (max-width: 767px) {

@@ -437,10 +437,10 @@ main {
         }
         span {
           // font
-          font-size: 2.8rem;
+          font-size: 4rem;
           color: $dark-grey-color;
-
           @include ResponsiveMobile() {
+            // font
             font-size: 1.8rem;
           }
         }
@@ -451,6 +451,7 @@ main {
           font-size: 1.5rem;
           color: $orange-color;
           @include ResponsiveMobile() {
+            // font
             font-size: 1.2rem;
           }
         }
@@ -459,28 +460,13 @@ main {
           font-family: $kr-font-family;
           font-size: 1rem;
           color: $black-color;
+          // border
+          border: 1px solid $dark-grey-color;
+          border-radius: 20px;
+          // padding
+          padding: 1px 10px;
           @include ResponsiveMobile() {
             font-size: 0.7rem;
-          }
-          // after
-          &::after {
-            //   display
-            display: block;
-            // content
-            content: '';
-            // border
-            border-bottom: 1px solid $black-color;
-            // transform
-            transform: scaleX(0);
-            // transition
-            transition: all 250ms ease-in-out;
-          }
-          &:hover,
-          &:focus {
-            &::after {
-              //   transform
-              transform: scaleX(1);
-            }
           }
         }
       }

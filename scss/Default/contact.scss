@@ -71,20 +71,13 @@ $blue-color: #036ffc;
   gap: 30px;
   // header
   header {
-    // size
-    width: 100%;
     // h1 Title
     h1 {
       // font
       font-weight: $bold-weight;
       font-size: 4.5rem; //모바일 3rem
-      // position
-      position: relative;
-      right: 40px;
       // padding
       padding-bottom: 50px;
-      // float
-      float: right;
     }
   }
   // Contact Privacy box
