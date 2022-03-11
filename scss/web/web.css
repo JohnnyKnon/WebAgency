@@ -85,10 +85,133 @@ main #apply #slides__style #date {
   text-align: center;
 }
 
+main #service {
+  max-width: 1200px;
+  width: 100vw;
+  height: 100%;
+  padding: 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (max-width: 1207px) {
+  main #service {
+    max-width: 700px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main #service {
+    max-width: 290px;
+  }
+}
+
+main #service header {
+  font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main #service header #service__title h1 {
+  display: inline-block;
+  font-size: 4.7rem;
+  color: #690000;
+}
+
+@media screen and (max-width: 767px) {
+  main #service header #service__title h1 {
+    font-size: 3rem;
+  }
+}
+
+main #service header #service__title h2 {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #575757;
+  padding-left: 5px;
+}
+
+main #service header h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.12rem;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 767px) {
+  main #service header h3 {
+    font-size: 0.9rem;
+  }
+}
+
+main #service header h3 span {
+  color: #fc7703;
+}
+
+main #service #service__contents__box {
+  font-family: "Noto Sans KR", sans-serif;
+  width: 100%;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+main #service #service__contents__box .service__contents__style {
+  width: 280px;
+  height: 190px;
+  padding: 20px;
+  border: 1px solid #8f8f8f;
+  border-radius: 15px;
+}
+
+main #service #service__contents__box .service__contents__style h4 {
+  font-size: 1.4rem;
+  color: #575757;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #690000;
+}
+
+main #service #service__contents__box .service__contents__style p {
+  width: 250px;
+  padding-top: 15px;
+}
+
 main #process {
   width: 100vw;
   height: 100%;
-  padding: 60px 0 100px 0;
+  padding: 0px 0 100px 0;
   background-color: #fff;
   font-family: "Noto Sans KR", sans-serif;
   display: -webkit-box;
