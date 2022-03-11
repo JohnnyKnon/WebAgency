@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 // Variable
 // Font Family
 $kr-font-family: 'Noto Sans KR', sans-serif;
@@ -18,6 +19,7 @@ $light-grey-color: #e0e0e0;
 $grey-color: #8f8f8f;
 $dark-grey-color: #575757;
 $skyblue: #0818eb;
+$light-skyblue: #03cffc;
 $button-color: rgba(0, 0, 0, 0.733);
 $orange-color: #fc7703;
 $light-orange-color: #f1a058;
@@ -88,6 +90,10 @@ main {
         font-weight: $bold-weight;
         font-size: 1.8rem;
         color: $orange-color;
+        // border
+        border-bottom: 1px solid $grey-color;
+        // padding
+        padding: 5px 60px;
       }
       //   contents
       #contents {
@@ -113,7 +119,7 @@ main {
           // font
           font-weight: $bold-weight;
           font-size: 1.5rem;
-          color: $orange-color;
+          color: $skyblue;
         }
       }
       // Date
