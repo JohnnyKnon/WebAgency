@@ -327,7 +327,6 @@ main {
             font-family: $kr-font-family;
             font-weight: $regular-weight;
             font-size: 1rem;
-            color: $white-color;
             // border
             border-radius: 5px;
             // background
@@ -336,6 +335,11 @@ main {
             padding: 10px 20px;
             // transition
             transition: all 320ms ease-in-out;
+            // a
+            a {
+              // font
+              color: $white-color;
+            }
             // hover
             &:hover,
             &:focus {

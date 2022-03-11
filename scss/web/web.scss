@@ -24,6 +24,7 @@ $button-color: rgba(0, 0, 0, 0.733);
 $orange-color: #fc7703;
 $light-orange-color: #f1a058;
 $scrollbar-thumb-grey: #9b9b9b;
+$red-color: rgb(105, 0, 0);
 
 // 자주쓰는 flex column 스타일
 @mixin flexboxStyle {
@@ -322,14 +323,14 @@ main {
             // type
             .type {
               // background
-              background-color: $skyblue;
+              background-color: $red-color;
               // border
               border-radius: 20px;
             }
             // status
             .status {
               // background
-              background-color: $orange-color;
+              background-color: $dark-grey-color;
               // border
               border-radius: 20px;
             }

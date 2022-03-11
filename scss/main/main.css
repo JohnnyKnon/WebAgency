@@ -8,7 +8,7 @@
 }
 
 textarea {
-  border: 1px solid #575757;
+  border: 1px solid #727272;
 }
 
 main {
@@ -333,7 +333,7 @@ main #about .right__box h2 {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
-  color: #575757;
+  color: #727272;
 }
 
 @media screen and (max-width: 767px) {
@@ -545,7 +545,7 @@ main #service .service__contents__wrapper .newsletter h1,
 main #service .service__contents__wrapper .hosting h1 {
   font-weight: 700;
   font-size: 1.5rem;
-  color: #fc7703;
+  color: #727272;
 }
 
 @media screen and (max-width: 767px) {

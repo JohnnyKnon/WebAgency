@@ -17,7 +17,7 @@ $black-color: #000;
 $nav-black-color: rgba(0, 0, 0, 0.822);
 $light-grey-color: #e0e0e0;
 $grey-color: #cfcfcf;
-$dark-grey-color: #575757;
+$dark-grey-color: #727272;
 $button-color: rgba(0, 0, 0, 0.733);
 $orange-color: #fc7703;
 $light-orange-color: #eb9e5c;
@@ -474,7 +474,7 @@ main {
           // font
           font-weight: $bold-weight;
           font-size: 1.5rem;
-          color: $orange-color;
+          color: $dark-grey-color;
           @include ResponsiveMobile() {
             // font
             font-size: 1.2rem;
