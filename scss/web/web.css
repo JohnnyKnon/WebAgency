@@ -142,6 +142,7 @@ main #service header #service__title h1 {
 
 @media screen and (max-width: 767px) {
   main #service header #service__title h1 {
+    width: 250px;
     font-size: 3rem;
   }
 }

@@ -7,6 +7,7 @@
     <!-- CSS Link -->
     <link rel="stylesheet" href="./scss/Default/Default.css" />
     <link rel="stylesheet" href="scss/main/main.css" />
+    <link rel="stylesheet" href="scss/Default/adminBtn/adminBtn.css" />
     <link rel="stylesheet" href="scss/Default/contact.css" />
     <link rel="stylesheet" href="./scss/main/popUp/popUp.css" />
     <!-- AOS -->
@@ -436,6 +437,24 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
         </article>
       </div>
     </div>
+    <!-- admin control-->
+    <div class="admin">
+      <button class="admin__toggle__btn">
+        <i class="fa-solid fa-chevron-left open"></i>
+        <i class="fa-solid fa-chevron-right close"></i>
+      </button>
+      <section class="admin__contents">
+        <a href="#">시안확인</a>
+        <a href="#">관리자콘솔 <i class="fa-solid fa-caret-right"></i></a>
+        <a href="http://www.webffle.com/pages/web/web.html#contact"
+          >견적문의 <i class="fa-solid fa-caret-right"></i
+        ></a>
+      </section>
+    </div>
+    <!-- Up btn -->
+    <button id="upBtn" class="up">
+      <i class="fas fa-angle-double-up"></i>
+    </button>
     <!-- Nav Part -->
     <nav id="navbar">
       <a href="#">< webffle /></a>
@@ -976,10 +995,15 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
     </script>
     <!-- End Channel Plugin -->
     <!-- JS Link -->
+    <!-- Up BTN for main Start -->
+    <script></script>
+    <!-- Up BTN for main End -->
+    <script src="./js/default/upBtn/upBtn.js"></script>
     <script src="./js/main/main.js"></script>
     <script src="./js/default/default.js"></script>
     <script src="./js/sign/sign.js"></script>
     <script src="./js/nav/nav.js"></script>
+    <script src="./js/default/adminNav/adminBtn.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

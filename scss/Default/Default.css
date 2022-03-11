@@ -479,4 +479,28 @@ aside ul #screen__pc__li:hover::after, aside ul #screen__pc__li:focus::after {
 #footer__box > section:nth-of-type(2) #certification img:nth-of-type(2) {
   width: 60px;
 }
+
+#upBtn {
+  font-size: 1.3rem;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 19px;
+  background-color: rgba(0, 0, 0, 0.822);
+  position: fixed;
+  right: 35px;
+  bottom: 100px;
+  z-index: 1300;
+}
+
+@media screen and (max-width: 767px) {
+  #upBtn {
+    right: 16px;
+    bottom: 80px;
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}
 /*# sourceMappingURL=Default.css.map */

@@ -178,6 +178,7 @@ main {
           color: $red-color;
           // Responsive
           @include ResponsiveMobile() {
+            width: 250px;
             // font
             font-size: 3rem;
           }

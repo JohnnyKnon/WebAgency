@@ -22,6 +22,7 @@ $button-color: rgba(0, 0, 0, 0.733);
 $orange-color: #fc7703;
 $light-orange-color: #f1a058;
 $scrollbar-thumb-grey: #9b9b9b;
+$red-color: rgb(105, 0, 0);
 
 // 자주쓰는 flex column 스타일
 @mixin flexboxStyle {
@@ -68,12 +69,11 @@ $scrollbar-thumb-grey: #9b9b9b;
     // text
     text-align: center;
     // background
-    background-color: $grey-color;
+    background-color: $red-color;
     // size
     width: 30px;
-    height: 100px;
-    // border
-    border: 1px solid $grey-color;
+    height: 200px;
+
     border-radius: 12px 0 0 12px;
     // Open
     .open {
@@ -100,9 +100,9 @@ $scrollbar-thumb-grey: #9b9b9b;
     font-family: $kr-font-family;
     // size
     width: 140px;
-    height: 100px;
+    height: 200px;
     //  border
-    border: 1px solid $grey-color;
+    border: 0.5px solid $light-grey-color;
     // background
     background-color: $white-color;
     // flex
@@ -115,7 +115,7 @@ $scrollbar-thumb-grey: #9b9b9b;
       // font
       font-size: 0.9rem;
       font-weight: $regular-weight;
-      color: $black-color;
+      color: $dark-grey-color;
       //   transition
       transition: all 280ms ease-in-out;
       //  hover
@@ -127,13 +127,19 @@ $scrollbar-thumb-grey: #9b9b9b;
     }
     a:nth-of-type(1) {
       // padding
-      padding-bottom: 5px;
+      padding-bottom: 20px;
     }
     a:nth-of-type(2) {
       // padding
-      padding-top: 5px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       // border
       border-top: 1px solid $light-grey-color;
+      border-bottom: 1px solid $light-grey-color;
+    }
+    a:nth-of-type(3) {
+      // padding
+      padding-top: 20px;
     }
   }
 }

@@ -17,10 +17,9 @@
   font-size: 1.2rem;
   color: #fff;
   text-align: center;
-  background-color: #8f8f8f;
+  background-color: #690000;
   width: 30px;
-  height: 100px;
-  border: 1px solid #8f8f8f;
+  height: 200px;
   border-radius: 12px 0 0 12px;
 }
 
@@ -39,8 +38,8 @@
 .admin .admin__contents {
   font-family: "Noto Sans KR", sans-serif;
   width: 140px;
-  height: 100px;
-  border: 1px solid #8f8f8f;
+  height: 200px;
+  border: 0.5px solid #e0e0e0;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,7 +59,7 @@
 .admin .admin__contents a {
   font-size: 0.9rem;
   font-weight: 400;
-  color: #000;
+  color: #575757;
   -webkit-transition: all 280ms ease-in-out;
   transition: all 280ms ease-in-out;
 }
@@ -70,12 +69,18 @@
 }
 
 .admin .admin__contents a:nth-of-type(1) {
-  padding-bottom: 5px;
+  padding-bottom: 20px;
 }
 
 .admin .admin__contents a:nth-of-type(2) {
-  padding-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin .admin__contents a:nth-of-type(3) {
+  padding-top: 20px;
 }
 
 .admin-active {
