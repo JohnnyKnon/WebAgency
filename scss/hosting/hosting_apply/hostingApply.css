@@ -296,6 +296,32 @@ main #apply .apply__box #apply__right ul .total {
   padding: 10px 0;
 }
 
+main #apply .apply__box .agreePrivacy {
+  margin-top: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+main #apply .apply__box .agreePrivacy label {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+main #apply .apply__box .agreePrivacy a {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-left: 4px;
+  padding: 0 1.5px;
+  border-bottom: 1px solid #fff;
+}
+
 main #apply .apply__box input[type='submit'] {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1rem;

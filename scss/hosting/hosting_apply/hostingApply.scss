@@ -331,6 +331,36 @@ main {
           }
         }
       }
+      // Agree privacy div
+      .agreePrivacy {
+        // margin
+        margin-top: 18px;
+        // flex
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        // label
+        label {
+          // font
+          font-family: $kr-font-family;
+          font-size: 0.8rem;
+          color: $white-color;
+          // cursor
+          cursor: pointer;
+        }
+        // a
+        a {
+          // font
+          font-size: 0.8rem;
+          color: $white-color;
+          // margin
+          margin-left: 4px;
+          // padding
+          padding: 0 1.5px;
+          // border
+          border-bottom: 1px solid $white-color;
+        }
+      }
       // input
       input[type='submit'] {
         // font
