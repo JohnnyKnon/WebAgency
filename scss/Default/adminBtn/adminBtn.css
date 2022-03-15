@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comforter&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
-.admin {
+.buttons {
   position: fixed;
-  right: -140px;
+  right: 0px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -10,36 +10,80 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 700;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 800;
 }
 
-.admin .admin__toggle__btn {
+.buttons #upBtn,
+.buttons #downBtn {
+  font-size: 1rem;
+  color: #fff;
+  width: 35px;
+  height: 40px;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.822);
+}
+
+.buttons #upBtn {
+  border-radius: 15px 0 0 0;
+}
+
+.buttons #downBtn {
+  border-radius: 0 0 0 15px;
+}
+
+.buttons .admin__toggle__btn {
   font-size: 1.2rem;
   color: #fff;
   text-align: center;
   background-color: #690000;
-  width: 30px;
-  height: 200px;
-  border-radius: 12px 0 0 12px;
+  width: 35px;
+  height: 40px;
+  padding: 10px 0;
 }
 
-.admin .admin__toggle__btn .open-hidden {
+.buttons .admin__toggle__btn .open-hidden {
   display: none;
 }
 
-.admin .admin__toggle__btn .close {
+.buttons .admin__toggle__btn .close {
   display: none;
 }
 
-.admin .admin__toggle__btn .close-active {
+.buttons .admin__toggle__btn .close-active {
   display: block;
+}
+
+.buttons-active {
+  right: 100px;
+}
+
+.admin {
+  position: fixed;
+  right: -100px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 700;
 }
 
 .admin .admin__contents {
   font-family: "Noto Sans KR", sans-serif;
-  width: 140px;
-  height: 200px;
+  width: 100px;
+  height: 50vh;
   border: 0.5px solid #e0e0e0;
+  border-radius: 15px 0 0 15px;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,6 +125,12 @@
 
 .admin .admin__contents a:nth-of-type(3) {
   padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.admin .admin__contents a:nth-of-type(4) {
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
 }
 
 .admin-active {

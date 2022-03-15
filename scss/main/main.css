@@ -595,7 +595,7 @@ main #service .service__contents__wrapper .hosting button {
   }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 912px) {
   main #service .service__contents__wrapper .hosting {
     width: 590px;
     height: 330px;
@@ -688,6 +688,7 @@ main #template article:nth-of-type(2) div #email__template {
 main #template article:nth-of-type(2) div input:nth-of-type(2) {
   border-radius: 5px;
   background-color: #fff;
+  cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: #000;

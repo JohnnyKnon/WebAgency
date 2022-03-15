@@ -379,7 +379,6 @@ main #apply #dots__box {
   position: absolute;
   top: 636px;
   width: 100%;
-  height: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -490,11 +489,31 @@ main #add #hdd td {
   }
 }
 
-main #add h1 {
+main #add header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #add header h1 {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
   font-size: 2rem;
   color: #fc7703;
+}
+
+main #add header .add__vat {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.8rem;
+  color: #575757;
+  padding-top: 10px;
 }
 
 main #add article {
@@ -510,6 +529,14 @@ main #add article {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 15px;
+  position: relative;
+  left: 15px;
+}
+
+@media screen and (max-width: 973px) {
+  main #add article {
+    left: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -562,7 +589,7 @@ main #add article section ul li {
   width: 500px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #575757;
   line-height: 20px;
 }

@@ -514,7 +514,7 @@ main {
       }
       .hosting {
         //   Responsive
-        @include ResponsiveSmallTablet() {
+        @include ResponsiveTablet() {
           @include ServiceBoxes(590px, 330px, $white-color, 12px);
         }
         @include ResponsiveMobile() {
@@ -591,6 +591,8 @@ main {
           border-radius: 5px;
           // background
           background-color: $white-color;
+          // cursor
+          cursor: pointer;
           // font
           font-family: $eng-font-family;
           font-weight: $bold-weight;

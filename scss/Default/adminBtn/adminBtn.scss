@@ -47,20 +47,46 @@ $red-color: rgb(105, 0, 0);
   }
 }
 
-// 어드민 네비
-.admin {
+// Buttons
+.buttons {
   // position
   position: fixed;
-  right: -140px;
+  right: 0px;
   top: 50%;
-  // transfrom
+  // transform
   transform: translateY(-50%);
   // transition
   transition: all 300ms ease-in-out;
   // flex
-  display: flex;
+  @include flexboxStyle();
+  justify-content: center;
+  align-items: center;
   // z-index
-  z-index: 700;
+  z-index: 800;
+  // Up button
+  #upBtn,
+  #downBtn {
+    // fint
+    font-size: 1rem;
+    color: $white-color;
+    // size
+    width: 35px;
+    height: 40px;
+    // padding
+    padding: 10px 0;
+    // background
+    background-color: $nav-black-color;
+  }
+  // Up border
+  #upBtn {
+    // border
+    border-radius: 15px 0 0 0;
+  }
+  // Down border
+  #downBtn {
+    // border
+    border-radius: 0 0 0 15px;
+  }
   //   button
   .admin__toggle__btn {
     //  font
@@ -71,10 +97,10 @@ $red-color: rgb(105, 0, 0);
     // background
     background-color: $red-color;
     // size
-    width: 30px;
-    height: 200px;
-
-    border-radius: 12px 0 0 12px;
+    width: 35px;
+    height: 40px;
+    // padding
+    padding: 10px 0;
     // Open
     .open {
     }
@@ -94,15 +120,36 @@ $red-color: rgb(105, 0, 0);
       display: block;
     }
   }
+}
+
+// Buttons Active
+.buttons-active {
+  // position
+  right: 100px;
+}
+
+// 어드민 네비
+.admin {
+  // position
+  position: fixed;
+  right: -100px;
+  top: 50%;
+  // transfrom
+  transform: translateY(-50%);
+  // transition
+  transition: all 300ms ease-in-out;
+  // z-index
+  z-index: 700;
   // admin contents
   .admin__contents {
     // font
     font-family: $kr-font-family;
     // size
-    width: 140px;
-    height: 200px;
+    width: 100px;
+    height: 50vh;
     //  border
     border: 0.5px solid $light-grey-color;
+    border-radius: 15px 0 0 15px;
     // background
     background-color: $white-color;
     // flex
@@ -140,6 +187,13 @@ $red-color: rgb(105, 0, 0);
     a:nth-of-type(3) {
       // padding
       padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    a:nth-of-type(4) {
+      // padding
+      padding-top: 20px;
+      // border
+      border-top: 1px solid $light-grey-color;
     }
   }
 }

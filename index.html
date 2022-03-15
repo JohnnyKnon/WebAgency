@@ -438,23 +438,28 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
       </div>
     </div>
     <!-- admin control-->
-    <div class="admin">
+    <div class="buttons">
+      <!-- Up btn -->
+      <button id="upBtn" class="up">
+        <i class="fas fa-angle-double-up"></i>
+      </button>
+      <!-- Toggle btn -->
       <button class="admin__toggle__btn">
         <i class="fa-solid fa-chevron-left open"></i>
         <i class="fa-solid fa-chevron-right close"></i>
       </button>
+      <button id="downBtn" class="down">
+        <i class="fas fa-angle-double-down"></i>
+      </button>
+    </div>
+    <div class="admin">
       <section class="admin__contents">
         <a href="#">시안확인</a>
         <a href="#">관리자콘솔 <i class="fa-solid fa-caret-right"></i></a>
-        <a href="http://www.webffle.com/pages/web/web.html#contact"
-          >견적문의 <i class="fa-solid fa-caret-right"></i
-        ></a>
+        <a href="http://www.webffle.com/pages/web/web.html#contact">견적문의</a>
+        <a href="#">세금계산서</a>
       </section>
     </div>
-    <!-- Up btn -->
-    <button id="upBtn" class="up">
-      <i class="fas fa-angle-double-up"></i>
-    </button>
     <!-- Nav Part -->
     <nav id="navbar">
       <a href="#">< webffle /></a>
@@ -998,7 +1003,7 @@ IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록, 불량 이용
     <!-- Up BTN for main Start -->
     <script></script>
     <!-- Up BTN for main End -->
-    <script src="./js/default/upBtn/upBtn.js"></script>
+    <script src="./js/default/scrollBtn/scrollBtn.js"></script>
     <script src="./js/main/main.js"></script>
     <script src="./js/default/default.js"></script>
     <script src="./js/sign/sign.js"></script>

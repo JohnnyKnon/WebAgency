@@ -11,6 +11,7 @@ $medium-weight: 500;
 $bold-weight: 700;
 $black-weight: 900;
 // Main color
+$light-grey-color: #e0e0e0;
 $white-color: #fff;
 $black-color: #000;
 $nav-black-color: rgba(0, 0, 0, 0.822);
@@ -126,6 +127,7 @@ main {
     height: 1000px;
     // background
     background-color: #6699cc;
+
     // filter
     filter: brightness(60%);
     // Reponsive
@@ -488,7 +490,6 @@ main {
       top: 636px;
       // size
       width: 100%;
-      height: 100%;
       // Responsive
       @include ResponsiveMobile() {
         // display
@@ -541,12 +542,26 @@ main {
     justify-content: center;
     gap: 80px;
     // title
-    h1 {
-      // font
-      font-family: $kr-font-family;
-      font-weight: $bold-weight;
-      font-size: 2rem;
-      color: $orange-color;
+    header {
+      // flex
+      @include flexboxStyle();
+      align-items: center;
+      h1 {
+        // font
+        font-family: $kr-font-family;
+        font-weight: $bold-weight;
+        font-size: 2rem;
+        color: $orange-color;
+      }
+
+      .add__vat {
+        // font
+        font-family: $kr-font-family;
+        font-size: 0.8rem;
+        color: $dark-grey-color;
+        // padding
+        padding-top: 10px;
+      }
     }
     // article contents box
     article {
@@ -556,6 +571,14 @@ main {
       align-items: center;
       flex-wrap: wrap;
       gap: 15px;
+      // position
+      position: relative;
+      left: 15px;
+      // Responsive
+      @include ResponsiveTablet() {
+        // position
+        left: 0;
+      }
       //   Reponsive
       @include ResponsiveMobile() {
         // flex
@@ -596,7 +619,7 @@ main {
             // font
             font-family: $kr-font-family;
             font-weight: $regular-weight;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: $dark-grey-color;
             // text
             line-height: 20px;
