@@ -125,14 +125,14 @@ $red-color: rgb(105, 0, 0);
 // Buttons Active
 .buttons-active {
   // position
-  right: 100px;
+  right: 140px;
 }
 
 // 어드민 네비
 .admin {
   // position
   position: fixed;
-  right: -100px;
+  right: -140px;
   top: 50%;
   // transfrom
   transform: translateY(-50%);
@@ -145,7 +145,7 @@ $red-color: rgb(105, 0, 0);
     // font
     font-family: $kr-font-family;
     // size
-    width: 100px;
+    width: 140px;
     height: 50vh;
     //  border
     border: 0.5px solid $light-grey-color;
